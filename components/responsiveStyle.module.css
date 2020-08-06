@@ -1,0 +1,8 @@
+.navbar{
+    position: fixed;
+}
+@media (min-width:800px){
+    .navbarLogo{
+        margin-left: 30px;
+    }
+}
