@@ -3,16 +3,23 @@ import Link from 'next/link'
 import Navbar from '../components/navbar'
 import utilStyles from '../components/utilStyles.module.css'
 import {Button, Form} from 'react-bootstrap'
+import {Provider} from '../context/ApiContext'
 
-const letsCreare = require('../public/assets/letsCreare.svg')
+
+const letsCreare = require('../public/assets/login.svg')
 const features = require('../public/assets/features.svg')
 const journey = require('../public/assets/journey.svg')
 const creareAGlance = require('../public/assets/creareAGlance.svg')
-const socialIcon = require('../public/assets/socialIcon.svg')
+const facebook = require('../public/assets/facebook.svg')
+const instagram = require('../public/assets/instagram.svg')
+const linkedIn = require('../public/assets/linkedIn.svg')
+const twitter = require('../public/assets/twitter.svg')
+const youtube = require('../public/assets/youtube.svg')
 
-export default function Home() {
+function Home() {
+
   return (
-    <div >
+      <>
       <Head>
         <title>Creare</title>
       </Head>
@@ -24,7 +31,7 @@ export default function Home() {
                 <div className="col " >
                   <h6 style={{color:'#F16C21'}} >LEARN ANYWHERE</h6>
                   <h1 style={{fontSize:100,color:'#0D3D55'}}>Let’s Crearé</h1>
-                  <Link href='/registerInstitute' >
+                  <Link href='/register-institute' >
                     <Button variant='dark'>Register Institute</Button>
                   </Link> 
                   <br/>
@@ -87,7 +94,9 @@ export default function Home() {
               <p style={{fontSize:100,color:'#0D3D55'}}>Let’s Crearé</p>
             </span>
             <span>
-              <Button variant='dark' >Launch Event</Button>
+              <Link href='/launch-event'>
+                <Button variant='dark' >Launch Event</Button>
+              </Link>
             </span>
             <p style={{fontSize:50,color:'#0D3D55'}}>Contact Us</p>
             </div>
@@ -129,7 +138,22 @@ export default function Home() {
               <div className='col'  >
                 <p style={{textAlign:'center'}} >Follow US</p>
                 <div style={{textAlign:'center'}}>
-                  <img src={socialIcon} className='img-fluid' />
+                  <a href='#'>
+                  <img src={facebook} style={{height:20,marginInline:10}} className='img-fluid' />
+                  </a>
+                  <a href='#'>
+                  <img src={instagram} style={{height:20,marginInline:10}} className='img-fluid' />
+                  </a>
+                  <a href='#'>
+                  <img src={linkedIn} style={{height:20,marginInline:10}} className='img-fluid' />
+                  </a>
+                  <a href='#'>
+                  <img src={twitter} style={{height:20,marginInline:10}} className='img-fluid' />
+                  </a>
+                  <a href='#'>
+                  <img src={youtube} style={{height:20,marginInline:10}} className='img-fluid' />
+                  </a>
+                  
                 </div>    
               </div>
               <div className='col d-flex justify-content-center' >
@@ -148,6 +172,15 @@ export default function Home() {
           </div>
         </footer>
       </body>
-    </div>
+      </>
+  )
+
+}
+
+export default ()=>{
+  return(
+    <Provider>
+      <Home/>
+    </Provider>
   )
 }

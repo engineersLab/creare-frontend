@@ -19,6 +19,12 @@
     background-color: #DBDBDB;
     overflow-x: hidden;
 }
+#formInput{
+    background: #dbdbdb;
+}
+#formInput:focus{
+    background: #fff;
+}
 
   
 /* Desktop */
@@ -27,6 +33,13 @@
         height: 90vh;
         position: relative;
     
+    }
+    .footer_text{
+        text-align: center;
+        margin-top: 10px;
+    }
+    .overflow{
+        overflow-x: hidden;
     }
     .form{
         margin: auto;
@@ -74,6 +87,9 @@
         margin-right: 10px;
     }
     .image{
+        display: none;
+    }
+    #image{
         display: none;
     }
     .image_2{

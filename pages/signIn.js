@@ -1,13 +1,14 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import {Button, Form} from 'react-bootstrap'
-import utilStyles from '../../components/utilStyles.module.css'
+import utilStyles from '../components/utilStyles.module.css'
 
 
-const signInImage = require('../../public/assets/login.svg')
-const creareSigninLogo = require('../../public/assets/creareSigninLogo.svg')
+const signInImage = require('../public/assets/login.svg')
+const creareSigninLogo = require('../public/assets/creareSigninLogo.svg')
 
 const signIn = () =>{
+
     return(
         <div>
             <Head>
@@ -43,19 +44,19 @@ const signIn = () =>{
                                 <div>
                                     <Link href='/login' >
                                         <Button variant="dark" type="submit" style={{width:'20%'}} >
-                                            Log In
+                                            LogIn
                                         </Button>
                                     </Link>
                                 </div>
                                 
                                 <div style={{marginTop:30}}>
-                                    <Link href='/registerUser' >
+                                    <Link href='/register-user' >
                                         <a>Don't have an account? <b>Register</b> now</a>
                                     </Link>
                                 </div>
                                 
                                 <div style={{marginTop:20}}>
-                                    <Link href='/screens/registerInstitute' >
+                                    <Link href='/register-institute' >
                                         <a>Your Institute not listed? <b>Register Institute</b> now</a>
                                     </Link>
                                 </div>
