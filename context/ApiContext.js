@@ -31,8 +31,7 @@ const registerUser = dispatch => async (data) =>{
     } 
 }
 
-const registerInstitute = dispatch => async (data) =>{​
-
+const registerInstitute = dispatch => async(data) => {
     const params = {
         "name": data.insName,
         "address": {
@@ -50,12 +49,14 @@ const registerInstitute = dispatch => async (data) =>{​
         "instType": data.insType,
         "idProof": data.idProof
     }
+
     try{
         // var res = await instance.post('/',params)
     }catch(err){
         dispatch({type:'error'})
     } 
 }
+
 
 
 
