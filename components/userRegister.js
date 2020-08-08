@@ -167,9 +167,6 @@ const InstituteRegister = ({schoolType}) =>{
                             <Toast.Body>Provide all the details</Toast.Body>
                         </Toast>
                 </div>
-                {/* <div style={{position:'absolute', textAlign:'center'}} >
-                    
-                </div> */}
                 
             </body>
         </>

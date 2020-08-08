@@ -31,9 +31,27 @@ const registerUser = dispatch => async (data) =>{
     } 
 }
 
-const registerInstitute = dispatch => async () =>{
+const registerInstitute = dispatch => async (data) =>{​
+
+    const params = {
+        "name": data.insName,
+        "address": {
+            "address1": data.addOne,
+            "city": data.city,
+            "state": data.state,
+            "pincode": data.pincode,
+            "country": data.country
+        },
+        "contact": {
+            "email": data.email,
+            "phone": data.phone,
+            "altPhone": data.altPhone
+        },
+        "instType": data.insType,
+        "idProof": data.idProof
+    }
     try{
-        var res = await instance.post('/')
+        // var res = await instance.post('/',params)
     }catch(err){
         dispatch({type:'error'})
     } 

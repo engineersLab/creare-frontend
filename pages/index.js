@@ -17,7 +17,7 @@ const twitter = require('../public/assets/twitter.svg')
 const youtube = require('../public/assets/youtube.svg')
 
 function Home() {
-
+  
   return (
       <>
       <Head>
