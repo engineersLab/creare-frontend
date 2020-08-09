@@ -1,14 +1,13 @@
-import {useState, useContext} from 'react'
+import {useState, useContext, useEffect} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import {Button, Form, Toast} from 'react-bootstrap'
 import utilStyles from '../components/utilStyles.module.css'
 import {storage} from '../components/firebase'
-import bsCustomFileInput from 'bs-custom-file-input'
-import $ from 'jquery'
 import {Provider} from '../context/ApiContext'
 import {Context} from '../context/ApiContext'
-
+import dynamic from 'next/dynamic'
+import $ from 'jquery'
 
 const signInImage = require('../public/assets/login.svg')
 const creareSigninLogo = require('../public/assets/creareSigninLogo.svg')
@@ -24,6 +23,7 @@ const NewInstituteRegister = () =>{
     const [msg, setMsg]= useState(null)
     const [idProof, setIdProof] = useState([])
     const [idCheck, setIdCheck] = useState([])
+
 
     //Form input
     const instituteTypes = ['School', 'College', 'University', 'Others']
@@ -48,6 +48,13 @@ const NewInstituteRegister = () =>{
     const [idType, setIdType] = useState(null)
     const [idUrl, setIdUrl] = useState(null)
     
+    useEffect(()=>{
+        const calleffect = async ()=>{
+            const {default: bsCustomFileInput} = await import ('bs-custom-file-input')
+            bsCustomFileInput.init()
+        }
+        calleffect()
+    },[])
 
     const handleChange = e =>{
         if(e.target.files[0]){
@@ -151,12 +158,6 @@ const NewInstituteRegister = () =>{
         }
         
     }
-
-    console.log(idUrl)
-
-    $(document).ready(function () {
-        bsCustomFileInput.init()
-      })
 
     return(
         <>
