@@ -12,7 +12,7 @@ const journey = require('../public/assets/journey.svg')
 const creareAGlance = require('../public/assets/creareAGlance.svg')
 const facebook = require('../public/assets/facebook.svg')
 const instagram = require('../public/assets/instagram.svg')
-const linkedIn = require('../public/assets/linkedIn.svg')
+const linkedIn = require('../public/assets/linkedin.svg')
 const twitter = require('../public/assets/twitter.svg')
 const youtube = require('../public/assets/youtube.svg')
 
