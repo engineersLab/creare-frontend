@@ -46,10 +46,9 @@ const NewInstituteRegister = () =>{
     const [pincode, setPincode] = useState(null)
     const [country, setCountry] = useState(null)
     const [idType, setIdType] = useState(null)
-    const [idUrl, setIdUrl] = useState(null)
     
     useEffect(()=>{
-        const calleffect = async ()=>{
+        const calleffect = async()=>{
             const {default: bsCustomFileInput} = await import ('bs-custom-file-input')
             bsCustomFileInput.init()
         }
@@ -78,7 +77,6 @@ const NewInstituteRegister = () =>{
                     .child(image.name)
                     .getDownloadURL()
                     .then(url=>{
-                        setIdUrl(url)
                         setIdProof([...idProof,{
                             "kind" : idType.toLowerCase(), 
                             "uploadUrl" : url
@@ -93,7 +91,6 @@ const NewInstituteRegister = () =>{
         handleUpload()
         setFlag(false)
     }
-
 
     const genNewInput = () =>{
         if(!input){

@@ -16,10 +16,17 @@
     height: 150px;
     width:'100%';
 }
+.card{
+    box-shadow: 5px 5px 5px grey;
+}
+.header_shadow{
+    box-shadow: 3px 3px 5px grey;
+}
 
 .view_height{
     height: 80vh;
 }
+
 .section_2{
     width:100%;
     background-color: #DBDBDB;
