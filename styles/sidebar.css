@@ -103,4 +103,7 @@ ul ul a{
     #sidebar-text span{
         display: none;
     }
+    .sidebar-content{
+        display: none;
+    }
 }
