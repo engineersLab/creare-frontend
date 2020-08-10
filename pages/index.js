@@ -2,14 +2,15 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/navbar'
 import utilStyles from '../components/utilStyles.module.css'
-import {Button, Form} from 'react-bootstrap'
+import {Button, Form, Accordion, Card} from 'react-bootstrap'
 import {Provider} from '../context/ApiContext'
+import {FiPlusSquare} from 'react-icons/fi'
+import {IconContext} from 'react-icons'
 
 
 const letsCreare = require('../public/assets/login.svg')
 const features = require('../public/assets/features.svg')
 const journey = require('../public/assets/journey.svg')
-const creareAGlance = require('../public/assets/creareAGlance.svg')
 const facebook = require('../public/assets/facebook.svg')
 const instagram = require('../public/assets/instagram.svg')
 const linkedIn = require('../public/assets/linkedin.svg')
@@ -83,9 +84,73 @@ function Home() {
         </div>
         
         <section className={utilStyles.view_height_3}>
-          <div className={utilStyles.image_2}>
-            <img src={creareAGlance} className={utilStyles.image_3} />            
+          <div className='row' style={{height:'100%'}}>
+            <div className='col d-flex justify-content-center' >
+              <div className='d-flex align-items-center' >
+                <img src={letsCreare} className='img-fluid '  />            
+              </div>
+            </div>
+
+            <div className='col d-flex justify-content-center'>
+              <div style={{marginTop:100}} >
+              <h1 style={{marginBottom:50}} >Crearé at a glance</h1>
+              <div>
+                <Accordion >
+                    <div style={{marginTop:30}}>
+                      <Accordion.Toggle as={Button} variant="light" eventKey="0">
+                        <IconContext.Provider  value={{size:'1.5em'}}>
+                          <FiPlusSquare style={{display:'inline', marginRight:20}}/>
+                        </IconContext.Provider>
+                        <p style={{display:'inline', fontSize:22}}>Why Crearé foundation?</p>
+                      </Accordion.Toggle>
+                      <Accordion.Collapse eventKey="0">
+                        <p>Hello! I'm the body</p>
+                      </Accordion.Collapse>
+                    </div>
+                    
+                    <div style={{marginTop:30}}>
+                      <Accordion.Toggle as={Button} variant="light" eventKey="1">
+                        <IconContext.Provider  value={{size:'1.5em'}}>
+                          <FiPlusSquare style={{display:'inline', marginRight:20}}/>
+                        </IconContext.Provider>
+                        <p style={{display:'inline', fontSize:22}}>How is it going to impact?</p>
+                      </Accordion.Toggle>
+                      <Accordion.Collapse eventKey="1">
+                        <p>Hello! I'm the body</p>
+                      </Accordion.Collapse>
+                    </div>
+
+                    <div style={{marginTop:30}}>
+                      <Accordion.Toggle as={Button} variant="light" eventKey="2">
+                        <IconContext.Provider  value={{size:'1.5em'}}>
+                          <FiPlusSquare style={{display:'inline', marginRight:20}}/>
+                        </IconContext.Provider>
+                        <p style={{display:'inline', fontSize:22}}>Necessary steps to get affiliated</p>
+                      </Accordion.Toggle>
+                      <Accordion.Collapse eventKey="2">
+                        <p>Hello! I'm the body</p>
+                      </Accordion.Collapse>
+                    </div>
+
+                    <div style={{marginTop:30}}>
+                      <Accordion.Toggle as={Button} variant="light" eventKey="3">
+                        <IconContext.Provider  value={{size:'1.5em'}}>
+                          <FiPlusSquare style={{display:'inline', marginRight:20}}/>
+                        </IconContext.Provider>
+                        <p style={{display:'inline', fontSize:22}}>Get ready for the future</p>
+                      </Accordion.Toggle>
+                      <Accordion.Collapse eventKey="3">
+                        <p>Hello! I'm the body</p>
+                      </Accordion.Collapse>
+                    </div> 
+                </Accordion>
+              </div>
+              </div>
+
+            </div>
+
           </div>
+          
         </section>
 
         <section>
@@ -132,26 +197,26 @@ function Home() {
             </div>
         </section>
         
-        <footer style={{marginTop:40}}>
+        <footer style={{marginTop:100}}>
           <div className={utilStyles.footer} style={{backgroundColor:'#0E3C54',color:'white'}} >
             <div className='row align-items-center flex-column flex-md-row'>
               <div className='col'  >
                 <p style={{textAlign:'center'}} >Follow US</p>
                 <div style={{textAlign:'center'}}>
                   <a href='#'>
-                  <img src={facebook} style={{height:20,marginInline:10}} className='img-fluid' />
+                  <img src={facebook} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
                   </a>
                   <a href='#'>
-                  <img src={instagram} style={{height:20,marginInline:10}} className='img-fluid' />
+                  <img src={instagram} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
                   </a>
                   <a href='#'>
-                  <img src={linkedIn} style={{height:20,marginInline:10}} className='img-fluid' />
+                  <img src={linkedIn} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
                   </a>
                   <a href='#'>
-                  <img src={twitter} style={{height:20,marginInline:10}} className='img-fluid' />
+                  <img src={twitter} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
                   </a>
                   <a href='#'>
-                  <img src={youtube} style={{height:20,marginInline:10}} className='img-fluid' />
+                  <img src={youtube} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
                   </a>
                   
                 </div>    

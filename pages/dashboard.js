@@ -7,33 +7,28 @@ import {List,ListItem,ListItemText,Divider} from '@material-ui/core'
 
 export default function dashboard(){
 
-    const styles = {
-        listItemText:{
-          fontSize:10,//Insert your required size
-        }
-      }
     return(
         <>
             <Head>
             <title>DashBoard</title>
             </Head>
             <Sidebar/>
-            <body style={{marginRight:50,background:'#e5e5e5'}} >
+            <body style={{marginRight:50,background:'#fff'}} >
                 <div style={{width:'100%',display:'inline-block'}}>
-                    <div style={{marginLeft:135,float:'left', marginTop:70}}>
+                    <div style={{marginLeft:135,float:'left', marginTop:50}}>
                         <h3>Home</h3>
                     </div>
-                    <div style={{float:'right', marginTop:70}}>
-                            <Button style={{display:'inline-block'}}  variant='dark' style={{display:"inline",marginRight:20}} >Create New</Button>
-                            <DropdownButton variant='light' style={{display:'inline-block'}} id="dropdown-basic-button" title="Classroom">
-                                <Dropdown.Item href="#/action-1">Join Class</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Schedule Class</Dropdown.Item>
-                            </DropdownButton>
+                    <div style={{float:'right', marginTop:50}}>
+                        <Button style={{display:'inline-block'}}  variant='dark' style={{display:"inline",marginRight:20}} >Create New</Button>
+                        <DropdownButton variant='light' style={{display:'inline-block'}} id="dropdown-basic-button" title="Classroom">
+                            <Dropdown.Item href="#/action-1">Join Class</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Schedule Class</Dropdown.Item>
+                        </DropdownButton>
                     </div>
                 </div>
-                <div style={{marginLeft:135}} className='row'>
-                    <div className='col col-md-5'>
-                        <Card  style={{ marginBottom:20}}>
+                <div style={{marginLeft:135}} className='row flex-column flex-md-row'>
+                    <div style={{marginTop:20}} className='col col-md-5'>
+                        <Card className={utilStyles.card} style={{ marginBottom:20}}>
                             <Card.Body>
                             <div>
                                 <Card.Title>Notifications</Card.Title>
@@ -53,7 +48,7 @@ export default function dashboard(){
                             </Card.Body>
                         </Card>
                         
-                        <Card style={{marginBottom:20}}>
+                        <Card className={utilStyles.card} style={{marginBottom:20}}>
                             <Card.Body>
                                 <div>
                                     <Card.Title>Scheduled for today</Card.Title>
@@ -82,12 +77,12 @@ export default function dashboard(){
                         </Card>
                     </div>
 
-                    <div className='col col-md-7'>
-                        <Card style={{ width:'100%', height:'auto', marginBottom:20}}>
+                    <div style={{marginTop:20}} className='col col-md-7'>
+                        <Card className={utilStyles.card} style={{ width:'100%', height:'auto', marginBottom:20}}>
                             <Card.Body>
                                 <div>
                                     <Card.Title>Statistics</Card.Title> 
-                                    <Card style={{display:'inline-block', height:130, width:150, marginInline:10}} >
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginInline:10}} >
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                                 <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>70</p></span>
@@ -95,7 +90,7 @@ export default function dashboard(){
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card style={{display:'inline-block', height:130, width:150, marginInline:10}}>
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginInline:10}}>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>70</p></span>
@@ -103,7 +98,7 @@ export default function dashboard(){
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card style={{display:'inline-block', height:130, width:150, marginInline:10}}>
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginInline:10}}>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>10</p></span>
@@ -111,7 +106,7 @@ export default function dashboard(){
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card style={{display:'inline-block', height:130, width:150, marginInline:10}}>
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginInline:10}}>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>2</p></span>
@@ -122,15 +117,15 @@ export default function dashboard(){
                                 </div>
                             </Card.Body>
                         </Card>
-                        <Card>
+                        <Card className={utilStyles.card}>
                             <Card.Body>
                                 <Card.Title>My Class</Card.Title>
-                                <Card>
+                                <Card className={utilStyles.card}>
                                     <Card.Body>
                                         <Card.Title>Maths Class</Card.Title>
                                         <Card.Subtitle className="mb-2 text-muted">No of Students <b>05</b></Card.Subtitle>
                                         <Divider/>
-                                        <div className='row align-items-center' style={{marginTop:30}}>
+                                        <div className='row align-items-center flex-column flex-md-row' style={{marginTop:30}}>
                                             <div className='col' style={{textAlign:'center'}} >
                                                 <p>No of Meetings</p>
                                                 <p>10</p>
@@ -164,27 +159,7 @@ export default function dashboard(){
                         </Card>
                     </div>
                 </div>
-            </body>
-        
+            </body>        
         </>    
     )
 }
-
-{/* <div style={{width:'100%'}}>
-                    <div style={{display:'inline-block'}}>
-                        <Card style={{ width: '11rem', height:'8rem' }}>
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                    <div style={{display:'inline-block'}}>
-                        <Card style={{ width: '11rem', height:'8rem' }}>
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                </div> */}

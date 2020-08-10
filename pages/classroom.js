@@ -3,22 +3,11 @@ import Sidebar from '../components/sidebar'
 import {Card, Button, DropdownButton, Dropdown, Table} from 'react-bootstrap'
 import Head from 'next/head'
 import {List, ListItem, ListItemText, Avatar, ListItemAvatar, Typography,makeStyles} from '@material-ui/core'
+import utilStyles from '../components/utilStyles.module.css'
 
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-      width: '100%',
-      maxWidth: '36ch',
-      backgroundColor: theme.palette.background.paper,
-    },
-    inline: {
-      display: 'inline',
-    },
-  }));
 
 export default function ClassRoom(){
 
-    const classes = useStyles();
 
     return(
         <>
@@ -43,46 +32,45 @@ export default function ClassRoom(){
                         </div>
                     </div>
                     <div style={{width:'auto', marginTop:30, marginBottom:30}}>
-                        <Card style={{height:140, width:170,display:'inline-block',marginInline:20  }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20  }}>
                             <Card.Body>
-                                <Card.Title>Total Students</Card.Title>
-                                {/* <Card.Subtitle className="mb-2 text-muted"><b>05</b></Card.Subtitle> */}
+                                <Card.Title style={{fontSize:16, fontWeight:600}}>Total Students</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card style={{height:140, width:170,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
                             <Card.Body>
-                                <Card.Title>Exam Papers</Card.Title>
+                                <Card.Title style={{fontSize:16, fontWeight:600}}>Exam Papers</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card style={{height:140, width:170,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
                             <Card.Body>
-                                <Card.Title>Videos</Card.Title>
+                                <Card.Title style={{fontSize:16, fontWeight:600}}>Videos</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card style={{height:140, width:170,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
                             <Card.Body>
-                                <Card.Title>Quiz</Card.Title>
+                                <Card.Title style={{fontSize:16, fontWeight:600}}>Quiz</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card style={{height:140, width:170,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
                             <Card.Body>
-                                <Card.Title>Syllabus</Card.Title>
+                                <Card.Title style={{fontSize:16, fontWeight:600}}>Syllabus</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card style={{height:140, width:170,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
                             <Card.Body>
-                                <Card.Title>Remainders</Card.Title>
+                                <Card.Title style={{fontSize:16, fontWeight:600}} >Remainders</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card style={{height:140, width:170,display:'inline-block',marginInline:20 }}>
-                            <Card.Body>
-                                <Card.Title>Went Live</Card.Title>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
+                            <Card.Body >
+                                <Card.Title style={{fontSize:16, fontWeight:600}}>Went Live</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
@@ -96,7 +84,6 @@ export default function ClassRoom(){
                             <th>School Name</th>
                             <th>Performance</th>
                             <th>Attendance</th>
-                            <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -106,7 +93,6 @@ export default function ClassRoom(){
                             <td>Otto</td>
                             <td>@mdo</td>
                             <td>70</td>
-                            <Button>Promote</Button>
                             </tr>
                             <tr>
                             <td>2</td>
@@ -114,20 +100,18 @@ export default function ClassRoom(){
                             <td>Thornton</td>
                             <td>@fat</td>
                             <td>70</td>
-                            <Button>Promote</Button>
                             </tr>
                             <tr>
                             <td>3</td>
                             <td colSpan="2">Larry the Bird</td>
                             <td>@twitter</td>
                             <td>70</td>
-                            <Button>Promote</Button>
                             </tr>
                         </tbody>
                     </Table>
-                    <Button variant='dark' style={{position:'absolute', bottom:40, right:60}}>Chat</Button>
+                    {/* <Button variant='dark' style={{position:'absolute', bottom:40, right:60}}>Chat</Button> */}
                     
-<div style={{position:'absolute', right:20, bottom:20,height:'50%', width:'18%'}} >
+                    {/* <div style={{position:'absolute', right:20, bottom:20,height:'50%', width:'18%'}} >
                         <Card style={{height:'100%'}} >
                             <Card.Body>
                                 <b>My Chat</b>
@@ -139,17 +123,17 @@ export default function ClassRoom(){
                                         <ListItemText
                                         primary={<b>Vishwanathan</b>}
                                         secondary={<p>What is the importance of bio enzymes</p>
-                                            // <React.Fragment>
-                                            // {/* <Typography
-                                            //     component="span"
-                                            //     variant="body2"
-                                            //     className={classes.inline}
-                                            //     color="textPrimary"
-                                            // >
-                                            //     Ali Connors
-                                            // </Typography> */}
-                                            // {" I'll be in your neighborhood doing errands this…"}
-                                            // </React.Fragment>
+                                            <React.Fragment>
+                                            <Typography
+                                                component="span"
+                                                variant="body2"
+                                                className={classes.inline}
+                                                color="textPrimary"
+                                            >
+                                                Ali Connors
+                                            </Typography>
+                                            {" I'll be in your neighborhood doing errands this…"}
+                                            </React.Fragment>
                                         }
                                         />
                                     </ListItem>
@@ -160,24 +144,24 @@ export default function ClassRoom(){
                                         <ListItemText
                                         primary={<b>Ganesh</b>}
                                         secondary={<p>What is the importance of bio enzymes</p>
-                                            // <React.Fragment>
-                                            // {/* <Typography
-                                            //     component="span"
-                                            //     variant="body2"
-                                            //     className={classes.inline}
-                                            //     color="textPrimary"
-                                            // >
-                                            //     Ali Connors
-                                            // </Typography> */}
-                                            // {" I'll be in your neighborhood doing errands this…"}
-                                            // </React.Fragment>
+                                            <React.Fragment>
+                                            <Typography
+                                                component="span"
+                                                variant="body2"
+                                                className={classes.inline}
+                                                color="textPrimary"
+                                            >
+                                                Ali Connors
+                                            </Typography>
+                                            {" I'll be in your neighborhood doing errands this…"}
+                                            </React.Fragment>
                                         }
                                         />
                                     </ListItem>
                                 </List>
                             </Card.Body>
                         </Card>
-                    </div>
+                    </div> */}
                 </div>
             </body>
         </>

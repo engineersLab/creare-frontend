@@ -16,12 +16,12 @@ export default function NavBar(){
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto"/>
               <Nav>
-                <Nav.Link style={{marginInline:25}} href="/home">Home</Nav.Link>
-                <Nav.Link style={{marginInline:25}} href="/how-creare">How Creare?</Nav.Link>
-                <Nav.Link style={{marginInline:25}} href="/blogs">Blogs</Nav.Link>
-                <Nav.Link style={{marginInline:25}} href="/contact-us">Contact Us</Nav.Link>
-                <Nav.Link style={{marginInline:24}} href="/meeting-room">Meeting Room</Nav.Link>
-                <Nav.Link style={{marginInline:25,color:'orange'}} href="/launch-event">Launch Event</Nav.Link>
+                <Nav.Link style={{marginLeft:25, marginRight:25}} href="/home">Home</Nav.Link>
+                <Nav.Link style={{marginLeft:25, marginRight:25}} href="/how-creare">How Creare?</Nav.Link>
+                <Nav.Link style={{marginLeft:25, marginRight:25}} href="/blogs">Blogs</Nav.Link>
+                <Nav.Link style={{marginLeft:25, marginRight:25}} href="/contact-us">Contact Us</Nav.Link>
+                <Nav.Link style={{marginLeft:25, marginRight:25}} href="/meeting-room">Meeting Room</Nav.Link>
+                <Nav.Link style={{marginLeft:25, marginRight:25,color:'orange'}} href="/launch-event">Launch Event</Nav.Link>
               </Nav>
             <Link href='/register-institute'>
               <a className='btn btn-dark' >Register Institute</a>

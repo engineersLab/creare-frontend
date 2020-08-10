@@ -25,7 +25,6 @@ a:focus{
 
 #sidebar ul.components{
     padding: 10px 0;
-    border-bottom: 1px solid #47748b;
 }
 
 #sidebar ul p{
@@ -38,9 +37,27 @@ a:focus{
     font-size: 1.1em;
 }
 
+.sidebar-icon-1{
+    color: gray;
+}
+.sidebar-icon-2{
+    color: gray;
+}
+.sidebar-icon-3{
+    color: gray;
+}
+.sidebar-icon-4{
+    color: gray;
+}
+
+.sidebar-icon-active{
+    color:orange
+}
+
 #sidebar ul li a:hover{
     color:#738605;
-    background: #fff;
+    background: paleturquoise;
+    border-radius: 20px;
 }
 
 #sidebar ul li.active>a,
@@ -97,8 +114,9 @@ ul ul a{
     #sidebar{
         min-width: 65px;
         max-width: 65px;
-        background: #0A0A0A;
+        background: #fff;
         color: #fff;
+        box-shadow: 5px 5px 5px grey;
     }
     #sidebar-text span{
         display: none;
