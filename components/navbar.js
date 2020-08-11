@@ -16,7 +16,7 @@ export default function NavBar(){
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto"/>
               <Nav>
-                <Nav.Link style={{marginLeft:25, marginRight:25}} href="/home">Home</Nav.Link>
+                <Nav.Link style={{marginLeft:25, marginRight:25}} href="/">Home</Nav.Link>
                 <Nav.Link style={{marginLeft:25, marginRight:25}} href="/how-creare">How Creare?</Nav.Link>
                 <Nav.Link style={{marginLeft:25, marginRight:25}} href="/blogs">Blogs</Nav.Link>
                 <Nav.Link style={{marginLeft:25, marginRight:25}} href="/contact-us">Contact Us</Nav.Link>

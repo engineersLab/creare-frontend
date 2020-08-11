@@ -11,7 +11,7 @@ const Notification = () =>{
             <Head>
                 <title>Notification</title>
             </Head>
-            <Sidebar/>
+            <Sidebar pageName='notification' />
             <body>
                 <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
                     <span style={{display:'inline-block'}} >

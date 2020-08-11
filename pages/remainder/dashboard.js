@@ -13,7 +13,7 @@ const Remainders = () =>{
             <Head>
                 <title>Remainders</title>
             </Head>
-            <Sidebar/>
+            <Sidebar pageName='remainder'/>
             <body>
                 <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
                     <span style={{display:'inline-block'}} >

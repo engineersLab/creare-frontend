@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import $ from 'jquery'
 import Link from 'next/link'
 import { FaHome, FaBell, FaPuzzlePiece } from 'react-icons/fa'
@@ -10,9 +11,34 @@ import {DropdownButton, Dropdown} from 'react-bootstrap'
 
 const sidebarLogo = require('../public/assets/sideBarLogo.svg')
 
-export default function sidebar(){
-    
-    return(      
+export default function sidebar({pageName}){
+
+    useEffect(()=>{
+        if(pageName == 'dashboard'){
+            $('.sidebar-icon-1').addClass('sidebar-icon-active')
+            $('.sidebar-icon-2').removeClass('sidebar-icon-active')
+            $('.sidebar-icon-3').removeClass('sidebar-icon-active')
+            $('.sidebar-icon-4').removeClass('sidebar-icon-active')
+        }else if(pageName == 'video'){
+            $('.sidebar-icon-2').addClass('sidebar-icon-active')
+            $('.sidebar-icon-1').removeClass('sidebar-icon-active')
+            $('.sidebar-icon-3').removeClass('sidebar-icon-active')
+            $('.sidebar-icon-4').removeClass('sidebar-icon-active')
+        }else if(pageName == 'remainder'){
+            $('.sidebar-icon-3').addClass('sidebar-icon-active')
+            $('.sidebar-icon-1').removeClass('sidebar-icon-active')
+            $('.sidebar-icon-2').removeClass('sidebar-icon-active')
+            $('.sidebar-icon-4').removeClass('sidebar-icon-active')
+        }else if(pageName == 'notification'){
+            $('.sidebar-icon-4').addClass('sidebar-icon-active')
+            $('.sidebar-icon-3').removeClass('sidebar-icon-active')
+            $('.sidebar-icon-2').removeClass('sidebar-icon-active')
+            $('.sidebar-icon-1').removeClass('sidebar-icon-active')
+        }
+    })
+
+    return(    
+          
             <div className='wrapper'>
             <nav id='sidebar'>
                     <div style={{textAlign:'center',paddingTop:20}} >
@@ -22,7 +48,7 @@ export default function sidebar(){
                     <ul className='list_unstyled components' >
                         <li>
                         <div id="sidebar-text" style={{textAlign:'center',paddingTop:30}} >
-                            <Link href="#">
+                            <Link href="/dashboard">
                                 <a>
                                     <IconContext.Provider  value={{ size:'2em' }}>
                                         <FaHome className='sidebar-icon-1 sidebar-icon-active' onClick={()=>{
@@ -57,7 +83,7 @@ export default function sidebar(){
                         </li>
                         <li>
                         <div id="sidebar-text" style={{textAlign:'center',paddingTop:40}} >
-                            <Link href='#'>
+                            <Link href='/remainder/dashboard'>
                                 <a>
                                 <IconContext.Provider value={{ size:'2em' }}>
                                     <RiTimerLine className='sidebar-icon-3' onClick={()=>{
@@ -69,12 +95,12 @@ export default function sidebar(){
                                 </IconContext.Provider>
                                 </a>
                             </Link>
-                            <span>Reminder</span>
+                            <span>Remainder</span>
                         </div>
                         </li>
                         <li>
                         <div id="sidebar-text" style={{textAlign:'center',paddingTop:40}} >
-                            <Link href="#">
+                            <Link href="/notification">
                                 <a>
                                     <IconContext.Provider value={{ size:'1.5em' }}>
                                         <FaBell className='sidebar-icon-4' onClick={()=>{
@@ -128,7 +154,6 @@ export default function sidebar(){
                             </div>
                         </li>
                     </ul>  
-                    
                 </nav>   
                 <div id='content' >
                     <nav className='navbar navbar-expand-lg navbar-light bg-light'>
@@ -139,10 +164,8 @@ export default function sidebar(){
                                 </button>        
                             </div>
                         </div>
-                        
                     </nav>
                 </div>  
             </div>        
-         
     )
 }

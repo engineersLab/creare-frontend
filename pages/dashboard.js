@@ -12,7 +12,7 @@ export default function dashboard(){
             <Head>
             <title>DashBoard</title>
             </Head>
-            <Sidebar />
+            <Sidebar pageName='dashboard' />
             <body style={{overflowX:'hidden'}}>
                 <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
                     <div style={{marginLeft:135,float:'left', marginTop:50}}>

@@ -58,7 +58,7 @@ function Home() {
                   <b className={utilStyles.header} > The Journey  </b>
                 </span>
                 <span>
-                  <Link href='/theJourney'>
+                  <Link href='/journey'>
                     <a>Know More>></a>
                   </Link> 
                 </span>
