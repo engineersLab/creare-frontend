@@ -26,25 +26,25 @@ const Remainders = () =>{
                 </div>
 
                 <div style={{width:'auto',marginLeft:135, marginTop:30, marginBottom:30}}>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20  }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:20, marginRight:20  }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Today</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:20, marginRight:20 }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Upcoming</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:20, marginRight:20 }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Completed</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:20, marginRight:20 }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Missed</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>

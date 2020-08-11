@@ -12,9 +12,9 @@ export default function dashboard(){
             <Head>
             <title>DashBoard</title>
             </Head>
-            <Sidebar/>
-            <body style={{marginRight:50,background:'#fff'}} >
-                <div style={{width:'100%',display:'inline-block'}}>
+            <Sidebar />
+            <body style={{overflowX:'hidden'}}>
+                <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
                     <div style={{marginLeft:135,float:'left', marginTop:50}}>
                         <h3>Home</h3>
                     </div>
@@ -82,7 +82,7 @@ export default function dashboard(){
                             <Card.Body>
                                 <div>
                                     <Card.Title>Statistics</Card.Title> 
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginInline:10}} >
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10}} >
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                                 <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>70</p></span>
@@ -90,7 +90,7 @@ export default function dashboard(){
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginInline:10}}>
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10}}>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>70</p></span>
@@ -98,7 +98,7 @@ export default function dashboard(){
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginInline:10}}>
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10}}>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>10</p></span>
@@ -106,7 +106,7 @@ export default function dashboard(){
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginInline:10}}>
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10}}>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>2</p></span>
@@ -117,7 +117,7 @@ export default function dashboard(){
                                 </div>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.card}>
+                        <Card style={{marginBottom:100}} className={utilStyles.card}>
                             <Card.Body>
                                 <Card.Title>My Class</Card.Title>
                                 <Card className={utilStyles.card}>

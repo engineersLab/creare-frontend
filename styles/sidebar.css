@@ -7,7 +7,7 @@ a:focus{
 }
 
 .wrapper{
-    position: absolute;
+    position: fixed;
     display: flex;
     text-decoration: none;
     transition: all 1s;

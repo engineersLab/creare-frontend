@@ -1,10 +1,13 @@
 import React,{useState, useContext} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import {Button, Form, Toast} from 'react-bootstrap'
+import {Button, Form, Toast, Card} from 'react-bootstrap'
 import utilStyles from './utilStyles.module.css'
 import {Context as ApiContext} from '../context/ApiContext'
 import {Provider} from '../context/ApiContext'
+import {TextField, List, ListItem} from '@material-ui/core'
+import {AiOutlineClose} from 'react-icons/ai'
+import {IconContext} from 'react-icons'
 
 
 const signInImage = require('../public/assets/login.svg')
@@ -23,10 +26,10 @@ const InstituteRegister = ({schoolType}) =>{
     const [role, setRole] = useState(null)
     const [checked, setChecked] = useState(false)
     const [error,setError] = useState(null)
-    const [show, setShow] = useState(false);
-    
-    const schools=["India","USA"]
-
+    const [show, setShow] = useState(false)
+    const [showInstitutes,  setShowInstitutes] = useState(false)
+    const [schools, setSchools] = useState(["HolyCross","GlazeBrooke","Acharya","Shrishti Vidyashram","VetriVikas","HolyCross","GlazeBrooke","Acharya","Shrishti Vidyashram","VetriVikas"])
+    const totalSchool = ["HolyCross","GlazeBrooke","Acharya","Shrishti Vidyashram","VetriVikas",,"HolyCross","GlazeBrooke","Acharya","Shrishti Vidyashram","VetriVikas"]
     const roles = ["Student","Teacher","Admin"]
 
     const checkPassword = (pass) =>{
@@ -35,6 +38,20 @@ const InstituteRegister = ({schoolType}) =>{
             setError("Password does not match")
         }else{
             setError(null)
+        }
+    }
+
+    const searchSchool = (val) =>{
+        console.log(val)
+        let x,y
+        let temparray = []
+        for(x in totalSchool){
+            y = totalSchool[x]
+            if(y.startsWith(val) || y.toLowerCase().startsWith(val)){
+                temparray.push(y)
+                setSchools(temparray)
+                console.log(y)
+            }
         }
     }
 
@@ -50,7 +67,7 @@ const InstituteRegister = ({schoolType}) =>{
                         <img src={signInImage} className='img-fluid' />
                     </div>
                     <div className='col' >
-                        <div style={{marginLeft:'20%'}}>
+                        <div style={{marginLeft:60}}>
                             <img src={creareSigninLogo} className='img-fluid' style={{width:'10%',height:'10%'}} />
                         </div>
 
@@ -101,16 +118,14 @@ const InstituteRegister = ({schoolType}) =>{
                                         {error ? <p style={{color:'red', fontSize:10}} >{error}</p> : null}
                                 </Form.Group>
 
-                                <Form.Group >
+                                <Form.Group  >
                                     <b style={{fontSize:12}}>Select {schoolType} School</b>
                                     <Form.Control 
-                                        id={utilStyles.formInput} size="sm" as="select" 
-                                        onChange={(val)=>setSchool(val.target.value)} >
-                                        <option value="" disabled selected>Select your School</option>
-                                        {schools.map((s)=>{
-                                            return <option key={s} >{s}</option>;
-                                        })}
-                                    </Form.Control>
+                                        id={utilStyles.formInput} value={school} onClick={()=>setShowInstitutes(true)} size="sm" 
+                                        placeholder='Select School'
+                                         >
+                                             
+                                         </Form.Control>
                                 </Form.Group>
                                 <Form.Group >
                                     <b style={{fontSize:12}}>Select Role</b>
@@ -167,7 +182,32 @@ const InstituteRegister = ({schoolType}) =>{
                             <Toast.Body>Provide all the details</Toast.Body>
                         </Toast>
                 </div>
-                
+                {
+                    showInstitutes
+                    ?
+                    <div style={{zIndex:2, position:'fixed',height:'100%',width:'100%', left:0, top:0, bottom:0, right:0, backgroundColor: 'rgba(0,0,0,0.5)'}} className='d-flex align-items-center justify-content-center'>
+                        <Card style={{position:'absolute',width:400, minHeight:400, maxHeight:400, overflowY:'scroll'}}   >
+                            <Card.Body>
+                                <TextField  onChange={(val)=>searchSchool(val.target.value)} fullWidth size='small' id="filled-basic" label="Institute Name"  />
+                                <IconContext.Provider  value={{ color: "gray", size:'1.3em' }}>
+                                    <AiOutlineClose style={{position:'absolute',top:40, right:20, cursor:'pointer'}} onClick={()=>setShowInstitutes(false)} /> 
+                                </IconContext.Provider>
+                                
+                                {/* <Button variant='dark' style={{marginTop:30, float:'right'}} >Publish</Button> */}
+                                <List>
+                                {schools.map((s)=>{
+                                    return <ListItem onClick={()=>{setSchool(s),setShowInstitutes(false)}} button>
+                                                <p>{s}</p>
+                                            </ListItem>
+                                            
+                                    })}
+                                </List>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                :
+                null
+                }
             </body>
         </>
     )
