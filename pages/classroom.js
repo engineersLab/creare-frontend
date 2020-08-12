@@ -1,8 +1,6 @@
-import React from 'react'
 import Sidebar from '../components/sidebar'
 import {Card, Button, DropdownButton, Dropdown, Table} from 'react-bootstrap'
 import Head from 'next/head'
-import {List, ListItem, ListItemText, Avatar, ListItemAvatar, Typography,makeStyles} from '@material-ui/core'
 import utilStyles from '../components/utilStyles.module.css'
 
 
@@ -32,43 +30,43 @@ export default function ClassRoom(){
                         </div>
                     </div>
                     <div style={{width:'auto', marginTop:30, marginBottom:30}}>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20  }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Total Students</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Exam Papers</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Videos</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Quiz</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Syllabus</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}} >Remainders</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginInline:20 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
                             <Card.Body >
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Went Live</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
@@ -79,33 +77,33 @@ export default function ClassRoom(){
                     <Table striped bordered hover variant="light">
                         <thead>
                             <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>School Name</th>
-                            <th>Performance</th>
-                            <th>Attendance</th>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>School Name</th>
+                                <th>Performance</th>
+                                <th>Attendance</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>70</td>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>70</td>
                             </tr>
                             <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>70</td>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>70</td>
                             </tr>
                             <tr>
-                            <td>3</td>
-                            <td colSpan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                            <td>70</td>
+                                <td>3</td>
+                                <td colSpan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>70</td>
                             </tr>
                         </tbody>
                     </Table>

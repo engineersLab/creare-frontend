@@ -1,11 +1,17 @@
 import Sidebar from '../components/sidebar'
 import Head from 'next/head'
-import {Card, Button, DropdownButton, Dropdown} from 'react-bootstrap'
+import {Card, Button, DropdownButton, Dropdown, Form} from 'react-bootstrap'
 import utilStyles from '../components/utilStyles.module.css'
-import {List,ListItem,ListItemText,Divider} from '@material-ui/core'
+import {List,ListItem,ListItemText,Divider, TextField} from '@material-ui/core'
+import { useState } from 'react'
+import {IconContext} from 'react-icons'
+import {AiOutlineClose} from 'react-icons/ai'
 
 
 export default function dashboard(){
+
+    const [qShow, setQShow] = useState(false)
+    const [teacher, setTeacher] = useState(null)
 
     return(
         <>
@@ -19,7 +25,7 @@ export default function dashboard(){
                         <h3>Home</h3>
                     </div>
                     <div style={{float:'right', marginTop:50}}>
-                        <Button style={{display:'inline-block'}}  variant='dark' style={{display:"inline",marginRight:20}} >Create New</Button>
+                        <Button style={{display:'inline-block'}} onClick={()=>setQShow(true)}  variant='dark' style={{display:"inline",marginRight:20}} >Create New</Button>
                         <DropdownButton variant='light' style={{display:'inline-block'}} id="dropdown-basic-button" title="Classroom">
                             <Dropdown.Item href="#/action-1">Join Class</Dropdown.Item>
                             <Dropdown.Item href="#/action-2">Schedule Class</Dropdown.Item>
@@ -159,6 +165,33 @@ export default function dashboard(){
                         </Card>
                     </div>
                 </div>
+                {
+                    qShow
+                    ?
+                    <div style={{zIndex:2, position:'fixed',height:'100%',width:'100%', left:0, top:0, bottom:0, right:0, backgroundColor: 'rgba(0,0,0,0.5)'}} className='d-flex align-items-center justify-content-center'>
+                        <Card style={{position:'absolute',width:400}}   >
+                            <Card.Body>
+                                <Card.Title style={{display:'inline'}} >Join meeting</Card.Title>
+                                <IconContext.Provider  value={{ color: "gray", size:'1.3em' }}>
+                                    <AiOutlineClose style={{display:'inline',float:'right', cursor:'pointer'}} onClick={()=>setQShow(false)} /> 
+                                </IconContext.Provider>
+                                {/* <p style={{display:'inline', float:'right'}}>Close</p> */}
+                                {/* <TextField fullWidth size='small' id="filled-basic" label="Ask question"  />
+                                */}
+                                <Form.Control 
+                                            id={utilStyles.formInput} size="sm" as="select" style={{marginTop:20}}
+                                            onChange={(val)=>setTeacher(val.target.value)}  >
+                                            <option value="" disabled selected>Join Meeting</option>
+                                            <option>Sumathi</option>
+                                            <option>Venkat</option>
+                                        </Form.Control>
+                                        <Button variant='dark' style={{marginTop:30, float:'right'}} >Go Live</Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                :
+                null
+                }
             </body>        
         </>    
     )

@@ -170,7 +170,7 @@ const InstituteRegister = ({schoolType}) =>{
                                     
                                     
                                     <div style={{marginTop:30}}>
-                                        <Link href='/screens/signIn' >
+                                        <Link href='/signIn' >
                                             <a>Already have an account? <b>Log In</b> now</a>
                                         </Link>
                                     </div>                  

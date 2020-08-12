@@ -43,7 +43,7 @@
 /* Desktop */
 @media (min-width:800px){
     .view_height_3{
-        height: 90vh;
+        height: 100vh;
         position: relative;
     
     }

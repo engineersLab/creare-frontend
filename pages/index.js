@@ -93,7 +93,7 @@ function Home() {
 
             <div className='col d-flex justify-content-center'>
               <div style={{marginTop:100}} >
-              <h1 style={{marginBottom:50}} >Crearé at a glance</h1>
+              <h1 style={{marginBottom:50, textShadow:'5px 5px 5px'}} >Crearé at a glance</h1>
               <div>
                 <Accordion  >
                     <div style={{marginTop:30}}>
@@ -104,7 +104,7 @@ function Home() {
                         <p style={{display:'inline', fontSize:22}}>Why Crearé foundation?</p>
                       </Accordion.Toggle>
                       <Accordion.Collapse eventKey="0">
-                        <p>Hello! I'm the body</p>
+                      <p style={{marginLeft:10,marginTop:20, width:350}} >My journey started when I was 10. My father was a civil engineer running a small company. And I used to spend most of the time on the construction site which made me learn many things. Lesser I know of being an entrepreneur but learning in and out of the construction process was very fascinating. My parents were running cab services for the corporate and bagged distributorship for a few top FMCG companies.</p>
                       </Accordion.Collapse>
                     </div>
                     
@@ -116,7 +116,7 @@ function Home() {
                         <p style={{display:'inline', fontSize:22}}>How is it going to impact?</p>
                       </Accordion.Toggle>
                       <Accordion.Collapse eventKey="1">
-                        <p style={{marginLeft:40,marginTop:20, width:350}} >My journey started when I was 10. My father was a civil engineer running a small company. And I used to spend most of the time on the construction site which made me learn many things. Lesser I know of being an entrepreneur but learning in and out of the construction process was very fascinating. My parents were running cab services for the corporate and bagged distributorship for a few top FMCG companies.</p>
+                        <p style={{marginLeft:10,marginTop:20, width:350}} >My journey started when I was 10. My father was a civil engineer running a small company. And I used to spend most of the time on the construction site which made me learn many things. Lesser I know of being an entrepreneur but learning in and out of the construction process was very fascinating. My parents were running cab services for the corporate and bagged distributorship for a few top FMCG companies.</p>
                       </Accordion.Collapse>
                     </div>
 
@@ -128,7 +128,7 @@ function Home() {
                         <p style={{display:'inline', fontSize:22}}>Necessary steps to get affiliated</p>
                       </Accordion.Toggle>
                       <Accordion.Collapse eventKey="2">
-                        <p>Hello! I'm the body</p>
+                      <p style={{marginLeft:10,marginTop:20, width:350}} >My journey started when I was 10. My father was a civil engineer running a small company. And I used to spend most of the time on the construction site which made me learn many things. Lesser I know of being an entrepreneur but learning in and out of the construction process was very fascinating. My parents were running cab services for the corporate and bagged distributorship for a few top FMCG companies.</p>
                       </Accordion.Collapse>
                     </div>
 
@@ -140,7 +140,7 @@ function Home() {
                         <p style={{display:'inline', fontSize:22}}>Get ready for the future</p>
                       </Accordion.Toggle>
                       <Accordion.Collapse eventKey="3">
-                      <p style={{marginLeft:40,marginTop:20, width:350}} >My journey started when I was 10. My father was a civil engineer running a small company. And I used to spend most of the time on the construction site which made me learn many things. Lesser I know of being an entrepreneur but learning in and out of the construction process was very fascinating. My parents were running cab services for the corporate and bagged distributorship for a few top FMCG companies.</p>
+                      <p style={{marginLeft:10,marginTop:20, width:350}} >My journey started when I was 10. My father was a civil engineer running a small company. And I used to spend most of the time on the construction site which made me learn many things. Lesser I know of being an entrepreneur but learning in and out of the construction process was very fascinating. My parents were running cab services for the corporate and bagged distributorship for a few top FMCG companies.</p>
                       </Accordion.Collapse>
                     </div> 
                 </Accordion>
@@ -153,7 +153,7 @@ function Home() {
           
         </section>
 
-        <section>
+        <section style={{marginTop:50}}>
           <div style={{textAlign:'center'}} >
             <span>
               <p style={{fontSize:100,color:'#0D3D55'}}>Let’s Crearé</p>

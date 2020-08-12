@@ -6,8 +6,7 @@ import utilStyles from '../components/utilStyles.module.css'
 import {storage} from '../components/firebase'
 import {Provider} from '../context/ApiContext'
 import {Context} from '../context/ApiContext'
-import dynamic from 'next/dynamic'
-import $ from 'jquery'
+
 
 const signInImage = require('../public/assets/login.svg')
 const creareSigninLogo = require('../public/assets/creareSigninLogo.svg')
