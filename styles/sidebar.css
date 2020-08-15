@@ -9,6 +9,7 @@ a:focus{
 .wrapper{
     position: fixed;
     display: flex;
+    z-index: 1;
     text-decoration: none;
     transition: all 1s;
 }

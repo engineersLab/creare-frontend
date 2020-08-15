@@ -12,7 +12,7 @@ const Notification = () =>{
                 <title>Notification</title>
             </Head>
             <Sidebar pageName='notification' />
-            <body>
+            <body style={{height:'90vh'}}>
                 <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
                     <span style={{display:'inline-block'}} >
                         <h3 style={{marginLeft:135, marginTop:50}} >Notifications</h3>
@@ -24,7 +24,7 @@ const Notification = () =>{
                 </div>
 
                 <div>
-                    <Card className={utilStyles.card} style={{ marginLeft:135,marginTop:20, marginRight:50}}>
+                    <Card className={utilStyles.card} style={{ marginLeft:135,marginTop:20, marginRight:50, marginBottom:20}}>
                         <Card.Body>
                             <div>
                                 <Card.Title style={{fontSize:20, fontWeight:600}}>Notifications</Card.Title>

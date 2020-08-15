@@ -24,7 +24,7 @@ export default function AdminDashboard(){
                 </div>
 
                 <div>
-                <div style={{marginTop:30,marginBottom:20}} className='d-flex justify-content-center' >  
+                    {/* <div style={{marginTop:30,marginBottom:20}} className='d-flex justify-content-center' >  
                          <Card style={{height:250, width:300 }} className={utilStyles.card} >
                              <Card.Body className='d-flex align-items-center justify-content-center' >
                                  <div style={{textAlign:'center'}}>
@@ -33,10 +33,10 @@ export default function AdminDashboard(){
                                  </div>
                              </Card.Body>
                          </Card>  
-                     </div>
-                     <div style={{marginBottom:20}} className='row '>
-                         <div style={{marginLeft:100}} className='col d-flex justify-content-end'>
-                             <Card style={{height:210, width:270 }} className={utilStyles.card}>
+                     </div> */}
+                     <div style={{marginBottom:20, marginTop:50, marginLeft:100, marginRight:100}} className='row '>
+                         <div className='col d-flex justify-content-center'>
+                             <Card style={{height:200, width:250 }} className={utilStyles.card}>
                                  <Card.Body className='d-flex align-items-center justify-content-center'>
                                      <div style={{textAlign:'center'}}>
                                      <h1><b>11</b></h1>
@@ -45,8 +45,28 @@ export default function AdminDashboard(){
                                  </Card.Body>
                              </Card>
                          </div>
-                         <div style={{marginRight:100}} className='col d-flex justify-content-start'>
-                             <Card style={{height:210, width:270 }} className={utilStyles.card}>
+                         <div className='col d-flex justify-content-center'>
+                             <Card style={{height:200, width:250 }} className={utilStyles.card}>
+                                 <Card.Body  className='d-flex align-items-center justify-content-center'>
+                                     <div style={{textAlign:'center'}}>
+                                     <h1><b>06</b></h1>
+                                     <p>No of Subjects</p>
+                                     </div>
+                                 </Card.Body>
+                             </Card>
+                         </div>
+                         <div className='col d-flex justify-content-center'>
+                             <Card style={{height:200, width:250 }} className={utilStyles.card}>
+                                 <Card.Body className='d-flex align-items-center justify-content-center'>
+                                     <div style={{textAlign:'center'}}>
+                                     <h1><b>11</b></h1>
+                                     <p>No of Teachers</p>
+                                     </div>
+                                 </Card.Body>
+                             </Card>
+                         </div>
+                         <div className='col d-flex justify-content-center'>
+                             <Card style={{height:200, width:250 }} className={utilStyles.card}>
                                  <Card.Body  className='d-flex align-items-center justify-content-center'>
                                      <div style={{textAlign:'center'}}>
                                      <h1><b>06</b></h1>
@@ -57,8 +77,8 @@ export default function AdminDashboard(){
                          </div>
                      </div>
 
-                     <div style={{marginBottom:20}} className='row'>
-                         <div className='col d-flex justify-content-end'>
+                     <div style={{marginBottom:20, marginLeft:100, marginRight:100}} className='row'>
+                         <div className='col d-flex justify-content-center'>
                              <Card style={{height:200, width:250 }} className={utilStyles.card}>
                                  <Card.Body className='d-flex align-items-center justify-content-center'>
                                      <div style={{textAlign:'center'}}>
@@ -88,7 +108,7 @@ export default function AdminDashboard(){
                                  </Card.Body>
                              </Card>
                          </div>
-                         <div className='col d-flex justify-content-start'>
+                         <div className='col d-flex justify-content-center'>
                              <Card style={{height:200, width:250 }} className={utilStyles.card}>
                                  <Card.Body className='d-flex align-items-center justify-content-center'>
                                      <div style={{textAlign:'center'}}>

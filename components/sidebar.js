@@ -8,6 +8,7 @@ import {BsThreeDots} from 'react-icons/bs'
 import {GoPrimitiveDot} from 'react-icons/go'
 import { IconContext } from "react-icons"
 import {DropdownButton, Dropdown} from 'react-bootstrap'
+import {Tooltip} from '@material-ui/core'
 
 const sidebarLogo = require('../public/assets/sideBarLogo.svg')
 
@@ -46,75 +47,87 @@ export default function sidebar({pageName}){
                     </div>
                     
                     <ul className='list_unstyled components' >
-                        <li>
-                        <div id="sidebar-text" style={{textAlign:'center',paddingTop:30}} >
-                            <Link href="/dashboard">
-                                <a>
-                                    <IconContext.Provider  value={{ size:'2em' }}>
-                                        <FaHome className='sidebar-icon-1 sidebar-icon-active' onClick={()=>{
-                                            $('.sidebar-icon-1').addClass('sidebar-icon-active')
-                                            $('.sidebar-icon-2').removeClass('sidebar-icon-active')
-                                            $('.sidebar-icon-3').removeClass('sidebar-icon-active')
-                                            $('.sidebar-icon-4').removeClass('sidebar-icon-active')
-                                        }}
-                                         />
-                                    </IconContext.Provider>
-                                </a>
-                            </Link>
-                            <span>Home</span>
-                        </div>
-                        </li>
-                        <li>
-                        <div id="sidebar-text" style={{textAlign:'center',paddingTop:40}} >
-                            <Link href='#'>
-                                <a>
-                                    <IconContext.Provider value={{ size:'1.8em' }}>
-                                        <MdOndemandVideo className='sidebar-icon-2' onClick={()=>{
-                                            $('.sidebar-icon-2').addClass('sidebar-icon-active')
-                                            $('.sidebar-icon-1').removeClass('sidebar-icon-active')
-                                            $('.sidebar-icon-3').removeClass('sidebar-icon-active')
-                                            $('.sidebar-icon-4').removeClass('sidebar-icon-active')
-                                        }}/>
-                                    </IconContext.Provider>
-                                </a>
-                            </Link>
-                            <span>Add Event</span>
-                        </div>
-                        </li>
-                        <li>
-                        <div id="sidebar-text" style={{textAlign:'center',paddingTop:40}} >
-                            <Link href='/remainder/dashboard'>
-                                <a>
-                                <IconContext.Provider value={{ size:'2em' }}>
-                                    <RiTimerLine className='sidebar-icon-3' onClick={()=>{
-                                            $('.sidebar-icon-3').addClass('sidebar-icon-active')
-                                            $('.sidebar-icon-1').removeClass('sidebar-icon-active')
-                                            $('.sidebar-icon-2').removeClass('sidebar-icon-active')
-                                            $('.sidebar-icon-4').removeClass('sidebar-icon-active')
-                                        }} />
-                                </IconContext.Provider>
-                                </a>
-                            </Link>
-                            <span>Remainder</span>
-                        </div>
-                        </li>
-                        <li>
-                        <div id="sidebar-text" style={{textAlign:'center',paddingTop:40}} >
-                            <Link href="/notification">
-                                <a>
-                                    <IconContext.Provider value={{ size:'1.5em' }}>
-                                        <FaBell className='sidebar-icon-4' onClick={()=>{
-                                            $('.sidebar-icon-4').addClass('sidebar-icon-active')
-                                            $('.sidebar-icon-3').removeClass('sidebar-icon-active')
-                                            $('.sidebar-icon-2').removeClass('sidebar-icon-active')
-                                            $('.sidebar-icon-1').removeClass('sidebar-icon-active')
-                                        }} />
-                                    </IconContext.Provider>
-                                </a>
-                            </Link>
-                            <span>Notification</span>
-                        </div>
-                        </li>
+                        <Tooltip title='Dashboard' >
+                            <li>
+                                <div id="sidebar-text" style={{textAlign:'center',paddingTop:30}} >
+                                    <Link href="/dashboard">
+                                        <a>
+                                            <IconContext.Provider  value={{ size:'2em' }}>
+                                                <FaHome className='sidebar-icon-1 sidebar-icon-active' onClick={()=>{
+                                                    $('.sidebar-icon-1').addClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-2').removeClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-3').removeClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-4').removeClass('sidebar-icon-active')
+                                                }}
+                                                />
+                                            </IconContext.Provider>
+                                        </a>
+                                    </Link>
+                                    <span>Home</span>
+                                </div>
+                            </li>
+                        </Tooltip>
+                        
+                        <Tooltip title='Classroom' >
+                            <li>
+                                <div id="sidebar-text" style={{textAlign:'center',paddingTop:40}} >
+                                    <Link href='#'>
+                                        <a>
+                                            <IconContext.Provider value={{ size:'1.8em' }}>
+                                                <MdOndemandVideo className='sidebar-icon-2' onClick={()=>{
+                                                    $('.sidebar-icon-2').addClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-1').removeClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-3').removeClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-4').removeClass('sidebar-icon-active')
+                                                }}/>
+                                            </IconContext.Provider>
+                                        </a>
+                                    </Link>
+                                    <span>Add Event</span>
+                                </div>
+                            </li>
+                        </Tooltip>
+                        
+                        <Tooltip title='Remainder' >
+                            <li>
+                                <div id="sidebar-text" style={{textAlign:'center',paddingTop:40}} >
+                                    <Link href='/remainder/dashboard'>
+                                        <a>
+                                        <IconContext.Provider value={{ size:'2em' }}>
+                                            <RiTimerLine className='sidebar-icon-3' onClick={()=>{
+                                                    $('.sidebar-icon-3').addClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-1').removeClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-2').removeClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-4').removeClass('sidebar-icon-active')
+                                                }} />
+                                        </IconContext.Provider>
+                                        </a>
+                                    </Link>
+                                    <span>Remainder</span>
+                                </div>
+                            </li>
+                        </Tooltip>
+                       
+                       <Tooltip title='Notification' >
+                            <li>
+                                <div id="sidebar-text" style={{textAlign:'center',paddingTop:40}} >
+                                    <Link href="/notification">
+                                        <a>
+                                            <IconContext.Provider value={{ size:'1.5em' }}>
+                                                <FaBell className='sidebar-icon-4' onClick={()=>{
+                                                    $('.sidebar-icon-4').addClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-3').removeClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-2').removeClass('sidebar-icon-active')
+                                                    $('.sidebar-icon-1').removeClass('sidebar-icon-active')
+                                                }} />
+                                            </IconContext.Provider>
+                                        </a>
+                                    </Link>
+                                    <span>Notification</span>
+                                </div>
+                            </li>
+                       </Tooltip>
+                        
                         
                     </ul>
                     
