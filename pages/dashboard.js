@@ -19,20 +19,20 @@ export default function dashboard(){
             <title>DashBoard</title>
             </Head>
             <Sidebar pageName='dashboard' />
-            <body style={{overflowX:'hidden'}}>
+            <body style={{overflowX:'hidden', background:'#ebebeb'}}>
                 <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
                     <div style={{marginLeft:135,float:'left', marginTop:50}}>
                         <h3>Home</h3>
                     </div>
                     <div style={{float:'right', marginTop:50}}>
                         <Button style={{display:'inline-block'}} onClick={()=>setQShow(true)}  variant='dark' style={{display:"inline",marginRight:20}} >Create New</Button>
-                        <DropdownButton variant='light' style={{display:'inline-block'}} id="dropdown-basic-button" title="Classroom">
+                        <DropdownButton variant='light' style={{display:'inline-block', marginRight:50}} id="dropdown-basic-button" title="Classroom">
                             <Dropdown.Item href="#/action-1">Join Class</Dropdown.Item>
                             <Dropdown.Item href="#/action-2">Schedule Class</Dropdown.Item>
                         </DropdownButton>
                     </div>
                 </div>
-                <div style={{marginLeft:135}} className='row flex-column flex-md-row'>
+                <div style={{marginLeft:135, marginRight:40}} className='row flex-column flex-md-row'>
                     <div style={{marginTop:20}} className='col col-md-5'>
                         <Card className={utilStyles.card} style={{ marginBottom:20}}>
                             <Card.Body>

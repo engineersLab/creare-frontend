@@ -169,8 +169,8 @@ export default function sidebar({pageName}){
                     </ul>  
                 </nav>   
                 <div id='content' >
-                    <nav className='navbar navbar-expand-lg navbar-light bg-light'>
-                        <div className='sidebar-content'>
+                    <nav className='navbar navbar-expand-lg navbar-light'>
+                        <div  className='sidebar-content'>
                             <div className='container-fluid'>
                                 <button type='button' id='sidebarCollapse' className='btn btn-info' onClick={()=>$("#sidebar").toggleClass('active')}>
                                 <i className='fas fa-align-left'></i>

@@ -119,6 +119,9 @@ ul ul a{
         color: #fff;
         box-shadow: 5px 5px 5px grey;
     }
+    #sidebar-button{
+        display: none;
+    }
     #sidebar-text span{
         display: none;
     }
