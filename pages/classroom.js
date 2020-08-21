@@ -13,12 +13,12 @@ export default function ClassRoom(){
                 <title>ClassRoom</title>
             </Head>
             <Sidebar/>
-            <body style={{marginRight:50}}>
-                <div style={{ marginLeft:100}}>
+            <body style={{height:'100vh'}}>
+                <div style={{marginLeft:100}}>
                     <div style={{width:'100%',display:'inline-block'}}>
                         <div style={{float:"right", marginTop:25}} >
                             <Button variant='outline-dark' style={{marginRight:20}} >Go Live</Button>
-                            <Button variant='dark' >Create New</Button>
+                            <Button variant='dark' style={{marginRight:20}} >Create New</Button>
                         </div>
                     </div>
                     <div style={{width:'100%',display:'inline-block'}}>
@@ -30,43 +30,43 @@ export default function ClassRoom(){
                         </div>
                     </div>
                     <div style={{width:'auto', marginTop:30, marginBottom:30}}>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10, cursor:'pointer' }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Total Students</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 , cursor:'pointer'}}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Exam Papers</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10, cursor:'pointer' }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Videos</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10, cursor:'pointer' }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Quiz</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10, cursor:'pointer' }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Syllabus</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10, cursor:'pointer' }}>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}} >Remainders</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10 }}>
+                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:10, marginRight:10, cursor:'pointer' }}>
                             <Card.Body >
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Went Live</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>

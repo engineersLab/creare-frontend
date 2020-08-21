@@ -67,16 +67,16 @@ const PreviewExam = () =>{
                                         <Card.Body>
                                             <Card.Text>Q1 Pick the odd one</Card.Text>
                                             <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input  type='radio' checked disabled />
-                                                <p style={{marginLeft:20,marginTop:14, color:'darkgreen'}} >Fish</p>
+                                                <input style={{marginTop:6}} type='radio' checked disabled />
+                                                <p style={{marginLeft:20, color:'darkgreen'}} >Fish</p>
                                             </div>
                                             <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input  type='radio' disabled />
-                                                <p style={{marginLeft:20,marginTop:14, color:'red'}} >Tiger</p>
+                                                <input style={{marginTop:6}}  type='radio' disabled />
+                                                <p style={{marginLeft:20,color:'red'}} >Tiger</p>
                                             </div>
                                             <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input  type='radio' disabled />
-                                                <p style={{marginLeft:20,marginTop:14, color:'red'}} >Lion</p>
+                                                <input style={{marginTop:6}}  type='radio' disabled />
+                                                <p style={{marginLeft:20, color:'red'}} >Lion</p>
                                             </div>
                                         </Card.Body>
                                     </Card>
@@ -85,16 +85,16 @@ const PreviewExam = () =>{
                                         <Card.Body>
                                             <Card.Text>Q2 Pick the odd one</Card.Text>
                                             <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input  type='radio'  disabled />
-                                                <p style={{marginLeft:20,marginTop:14, color:'red'}} >Car</p>
+                                                <input style={{marginTop:6}}  type='radio'  disabled />
+                                                <p style={{marginLeft:20, color:'red'}} >Car</p>
                                             </div>
                                             <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input  type='radio' checked disabled />
-                                                <p style={{marginLeft:20,marginTop:14, color:'darkgreen'}} >Ship</p>
+                                                <input style={{marginTop:6}}  type='radio' checked disabled />
+                                                <p style={{marginLeft:20, color:'darkgreen'}} >Ship</p>
                                             </div>
                                             <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input  type='radio' disabled />
-                                                <p style={{marginLeft:20,marginTop:14, color:'red'}} >Bike</p>
+                                                <input style={{marginTop:6}}  type='radio' disabled />
+                                                <p style={{marginLeft:20, color:'red'}} >Bike</p>
                                             </div>
                                         </Card.Body>
                                     </Card>

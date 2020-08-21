@@ -16,15 +16,15 @@ export default function dashboard(){
     return(
         <>
             <Head>
-            <title>DashBoard</title>
+            <title>Dashboard</title>
             </Head>
             <Sidebar pageName='dashboard' />
             <body style={{overflowX:'hidden', background:'#ebebeb'}}>
-                <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                    <div style={{marginLeft:135,float:'left', marginTop:50}}>
+                <div style={{display:'block', width:'100%', height:100}} className={utilStyles.header_shadow}>
+                    <div style={{marginLeft:135,float:'left', marginTop:40}}>
                         <h3>Home</h3>
                     </div>
-                    <div style={{float:'right', marginTop:50}}>
+                    <div style={{float:'right', marginTop:40}}>
                         <Button style={{display:'inline-block'}} onClick={()=>setQShow(true)}  variant='dark' style={{display:"inline",marginRight:20}} >Create New</Button>
                         <DropdownButton variant='light' style={{display:'inline-block', marginRight:50}} id="dropdown-basic-button" title="Classroom">
                             <Dropdown.Item href="#/action-1">Join Class</Dropdown.Item>
@@ -73,8 +73,15 @@ export default function dashboard(){
                                         <Card.Body>
                                             <div>
                                                 <Card.Title >Remainder</Card.Title> 
-                                                <p style={{display:'inline', fontSize:14}}>Take Seminar on Geometry, Chapter 8 </p>
-                                                <Button style={{float:"right"}} size="sm" variant='light'>Mark as Completed</Button>
+                                                <List>
+                                                    <ListItem >
+                                                        <ListItemText primary={<p style={{fontSize:13}}>Take Seminar on Geometry, Chapter 8</p>}  />
+                                                        <Button variant='light' size='sm' >Mark as Completed</Button>
+                                                    </ListItem>
+                                                    <Divider/>
+                                                </List>
+                                                {/* <p style={{display:'inline', fontSize:14}}>Take Seminar on Geometry, Chapter 8 </p>
+                                                <Button style={{float:"right"}} size="sm" variant='light'>Mark as Completed</Button> */}
                                             </div>
                                         </Card.Body>
                                     </Card>
@@ -88,7 +95,7 @@ export default function dashboard(){
                             <Card.Body>
                                 <div>
                                     <Card.Title>Statistics</Card.Title> 
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10}} >
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10, marginTop:10}} >
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                                 <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>70</p></span>
@@ -96,7 +103,7 @@ export default function dashboard(){
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10}}>
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10,marginTop:10}}>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>70</p></span>
@@ -104,7 +111,7 @@ export default function dashboard(){
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10}}>
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10,marginTop:10}}>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>10</p></span>
@@ -112,7 +119,7 @@ export default function dashboard(){
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10}}>
+                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10,marginTop:10}}>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>2</p></span>
@@ -123,6 +130,7 @@ export default function dashboard(){
                                 </div>
                             </Card.Body>
                         </Card>
+                        
                         <Card style={{marginBottom:100}} className={utilStyles.card}>
                             <Card.Body>
                                 <Card.Title>My Class</Card.Title>

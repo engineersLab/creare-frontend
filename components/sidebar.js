@@ -71,7 +71,7 @@ export default function sidebar({pageName}){
                         <Tooltip title='Classroom' >
                             <li>
                                 <div id="sidebar-text" style={{textAlign:'center',paddingTop:40}} >
-                                    <Link href='#'>
+                                    <Link href='/classroom'>
                                         <a>
                                             <IconContext.Provider value={{ size:'1.8em' }}>
                                                 <MdOndemandVideo className='sidebar-icon-2' onClick={()=>{
@@ -173,7 +173,7 @@ export default function sidebar({pageName}){
                         <div  className='sidebar-content'>
                             <div className='container-fluid'>
                                 <button type='button' id='sidebarCollapse' className='btn btn-info' onClick={()=>$("#sidebar").toggleClass('active')}>
-                                <i className='fas fa-align-left'></i>
+                                    <i className='fas fa-align-left'></i>
                                 </button>        
                             </div>
                         </div>
