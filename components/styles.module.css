@@ -48,15 +48,20 @@
 }
 
 #homepage_image{
-    display: none;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    margin-left: 50 ;
+    margin-right: 50;
 }
 
 #homepage_text{
-    margin-left: 15px;
+    /* margin-left: 15px; */
     display: -ms-flexbox !important;
     display: flex !important;
-    -ms-flex-pack: flex-start !important;
-    justify-content: flex-start !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
 }
 
 #homepage_subtext{
