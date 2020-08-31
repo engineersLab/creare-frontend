@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/navbar'
-import utilStyles from '../components/utilStyles.module.css'
+import styles from '../components/styles.module.css'
+import {Button, Form} from 'react-bootstrap'
+
 
 const journey = require('../public/assets/journey.svg')
 const pravin = require('../public/assets/pravin.png')
@@ -10,6 +12,8 @@ const instagram = require('../public/assets/instagram.svg')
 const linkedIn = require('../public/assets/linkedin.svg')
 const twitter = require('../public/assets/twitter.svg')
 const youtube = require('../public/assets/youtube.svg')
+const playStore = require('../public/assets/playstore.svg')
+
 
 const Journey = () =>{
     return(
@@ -21,23 +25,26 @@ const Journey = () =>{
             </Head>
             <Navbar/>
             <body style={{overflowX:'hidden'}} >
-                <section style={{height:'90vh'}} >
-                    <div >
-                        <h1 style={{marginTop:150, marginLeft:100}}>Journey</h1>
+                <section className='cus-desktop-header' style={{height:'90vh'}} >
+                    <div>
+                        <h1 style={{marginTop:80, marginLeft:100}}>Journey</h1>
                     </div>
                     <div style={{textAlign:'center'}}>
-                        <img src={journey} className='img-fluid'/>
+                        <img src={journey} className='img-fluid cus-desktop-header'/>
                     </div>
                 </section>
+                <div className='cus-mobile-header cus-left-margin'>
+                  <h3 className='cus-left-margin'>Journey</h3>
+                </div>
                 
-                <section className={utilStyles.container} >
+                <section className='cus-journey-content' >
                     <div className='row' >
-                        <div className='col col-md-5'>
+                        <div className='col-sm-12 col-md-5'>
                             {/* <h1>Hi</h1> */}
                             <img src={pravin} className='img-fluid'/>
                         </div>
 
-                        <div className='col col-md-7' >
+                        <div className='col-sm-12 col-md-7' >
                             <p style={{fontSize:18, marginTop:70}}>Everyone has their own story. Well, here is mine.</p>
 
                             <p style={{fontSize:18}}>My journey started when I was 10. My father was a civil engineer running a small company. And I used to spend most of the time on the construction site which made me learn many things. Lesser I know of being an entrepreneur but learning in and out of the construction process was very fascinating. My parents were running cab services for the corporate and bagged distributorship for a few top FMCG companies. Being an entrepreneur was my dream and I started my entrepreneurial journey when I was 19. The maiden project was on building renovation. Being good at building customer relationships I bagged 6 continuous projects related to real-estate. I soon had to pause and pursue my under-graduation. Having pursued diploma after 10th grade I had to study only 3 years of engineering. I still haven't secured my degree, only have my course completion. I never wanted to settle for a desk job and my search was big. 
@@ -57,45 +64,224 @@ const Journey = () =>{
 
                     <p style={{fontSize:18}}>To every Institution / Student / Parent.</p>
                 </section>
-                <footer style={{marginTop:100}}>
-          <div className={utilStyles.footer} style={{backgroundColor:'#0E3C54',color:'white'}} >
-            <div className='row align-items-center flex-column flex-md-row'>
-              <div className='col'  >
-                <p style={{textAlign:'center'}} >Follow US</p>
-                <div style={{textAlign:'center'}}>
-                  <a href='#'>
-                  <img src={facebook} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
-                  </a>
-                  <a href='#'>
-                  <img src={instagram} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
-                  </a>
-                  <a href='#'>
-                  <img src={linkedIn} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
-                  </a>
-                  <a href='#'>
-                  <img src={twitter} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
-                  </a>
-                  <a href='#'>
-                  <img src={youtube} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
-                  </a>
-                  
-                </div>    
-              </div>
-              <div className='col d-flex justify-content-center' >
-                <div className={utilStyles.footer_text}>
-                  <p>Email Id</p>
-                  <p>info@crearefoundation.com</p>
-                </div> 
-              </div>
-              <div className='col d-flex justify-content-center' >
-                <div className={utilStyles.footer_text}>
-                  <p>Phone Number</p>
-                  <p>+91 893 989 0562</p>
+                <footer style={{background:'#0E3C54', color:'white', marginTop:100}}>
+                <div id={styles.footer_content}>
+                  <div className='row flex-column flex-md-row'>
+                    <div id={styles.footer_subcontent} className='col'>
+                      <div>
+                        <div>
+                          <p style={{color:'orange'}} >SITEMAP</p>
+                        </div>
+                        <div className='cus-bottom-margin'>
+                          <Link href='#'>
+                            <a>Event</a>
+                          </Link>
+                        </div>
+                        <div className='cus-bottom-margin'>
+                          <Link href='#'>
+                            <a>Webinar</a>
+                          </Link>
+                        </div>
+                        <div className='cus-bottom-margin'>
+                          <Link href='/signIn'>
+                            <a>Sign In</a>
+                          </Link>
+                        </div>
+                        <div className='cus-bottom-margin'>
+                          <Link href='/register-user'>
+                            <a>Register Yourself</a>
+                          </Link>
+                        </div>
+                        <div className='cus-bottom-margin'>
+                          <Link href='/register-institute'>
+                            <a>Register Institute</a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className='col' >
+                      <div id={styles.footer_subcontent}>
+                        <div>
+                          <p style={{color:'orange'}} >FOLLOW US</p>
+                        </div>
+                        <div>
+                          <a href='#'>
+                            <img src={facebook} style={{height:20, marginRight:10}} className='img-fluid' />
+                          </a>
+                          <a href='#'>
+                            <img src={instagram} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
+                          </a>
+                          <a href='#'>
+                            <img src={linkedIn} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
+                          </a>
+                          <a href='#'>
+                            <img src={twitter} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
+                          </a>
+                          <a href='#'>
+                            <img src={youtube} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
+                          </a>
+                        </div>
+                        <div style={{marginTop:30}} >
+                          <p style={{color:'orange'}} >INSTALL APP</p>
+                        </div>
+                        <div>
+                          <a href='#' >
+                            <img src={playStore} style={{width:100}} className='img-fluid'/>
+                          </a>
+                        </div>
+                        <div>
+                          <a href='#'>
+                            <img src={playStore} style={{width:100}} className='img-fluid'/>
+                          </a>
+                        </div>
+                        <div>
+                      </div>
+                      </div> 
+                    </div>
+
+                    <div className='col'>
+                      <div id={styles.footer_subcontent}>
+                        <div>
+                          <p style={{color:'orange'}} >COMPANY</p>
+                        </div>
+                        <div className='cus-bottom-margin'>
+                          <Link href='#'>
+                            <a>About Us</a>
+                          </Link>
+                        </div>
+                        <div className='cus-bottom-margin'>
+                          <Link href='#'>
+                            <a>Contact Us</a>
+                          </Link>
+                        </div>
+                        <div className='cus-bottom-margin'>
+                          <Link href='#'>
+                            <a>Privacy Policy</a>
+                          </Link>
+                        </div>
+                        <div className='cus-bottom-margin'>
+                          <Link href='#'>
+                            <a>Terms and Conditions</a>
+                          </Link>
+                        </div>
+                        <div className='cus-bottom-margin'>
+                          <Link href='#'>
+                            <a>Refund Policy</a>
+                          </Link>
+                        </div>
+                        <div className='cus-bottom-margin'>
+                          <Link href='#'>
+                            <a>FAQ</a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className='col'>
+                    <div id={styles.footer_subcontent}>
+                        <div>
+                          <p style={{color:'orange'}} >LEAVE US MESSAGE</p>
+                        </div>
+                        <div>
+                          <Form>
+                            <Form.Group controlId="formEmail">
+                              <Form.Label>EMAIL ID</Form.Label>
+                              <Form.Control size='sm' type="email" placeholder="Enter email" />
+                            </Form.Group>
+                            <Form.Group controlId="formPassword">
+                              <Form.Label>Password</Form.Label>
+                              <Form.Control size='sm' type="password" placeholder="Password" />
+                            </Form.Group>
+                            <Form.Group controlId="formMessage">
+                              <Form.Label>Password</Form.Label>
+                              <Form.Control size='sm' placeholder="Message" />
+                            </Form.Group>
+                            <div style={{textAlign:'center'}} >
+                              <Button size='sm' variant="primary">
+                                Send Message
+                              </Button>
+                            </div>
+                          </Form>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                  {/*row ends*/}
+                  <div id={styles.footer_subcontent} style={{marginTop:30}}>
+                    <div>
+                      <p style={{fontWeight:800}} >Why Creare?</p>
+                    </div>
+                    <div>
+                      <p style={{fontWeight:600}}>Study at ease</p>
+                    </div>
+                    <div>
+                      <p>Creare aspires to overthrow the complexity associated with education. The complexity drives a
+                          wedge between the students and the process of learning. We provide education seriously with
+                          fun. Empowering and engaging them with brain freezing activities with the help our artificial
+                          intelligence. We do not stop at engaging them we are here to promote the logical thinking and
+                          problem solving methods side by side to sustain the increase of digital based world.</p>
+                    <p>
+                      The perks of our campus set up include digital classroom, Partnering with government and
+                      private institutions and student friendly campus.
+                    </p>
+                    </div>
+                    <div>
+                      <p style={{fontWeight:600}}>One stop destination</p>
+                    </div>
+                    <div>
+                      <p>Creare is a one stop destination for an individual who is willing to grow in and out. We are a
+                        perfect blend of platform providing both school and after school education. This in turn makes
+                        them dynamic at every point in life.</p>
+                    </div>
+                    <div>
+                      <p style={{fontWeight:800}}>Necessary steps to get affiliated</p>
+                    </div>
+                    <div>
+                      <p>Creare is breaking the barriers of monopoly and is a one of its kind company seeking the
+                          approval of the Indian government. We invite the fresh minds to brace our initiation and
+                          empower our budding ed-tech skill based learning company to seek the shore of success.</p>
+                    </div>
+                    <div>
+                      <p style={{fontWeight:800}}>How is it going to impact?</p>
+                    </div>
+                    <div>
+                      <p>With the enlarging gap between the powerful younger minds and the educational system Creare
+                        will focus on bridging the compatibility of technology and education. This will bring about the
+                        changes in the literacy rate and generate students who are well suited and specialized in their
+                        stream of job opportunities. We are also aiming to get hold of the rural students and the
+                        downtrodden to benefit from our services and raise their standard of living.</p>
+                    </div>
+                  </div>
+
+                  <div style={{marginTop:30, fontWeight:600}}>
+                    <span className='cus-bottom-margin'>
+                      <Link href='#'>
+                        <a>Disclaimer</a>
+                      </Link>
+                    </span>
+                    <span style={{marginLeft:10, marginRight:10}}>|</span>
+                    <span className='cus-bottom-margin'>
+                      <Link href='#'>
+                        <a>Privacy Policy </a>
+                      </Link>
+                    </span>
+                    <span style={{marginLeft:10, marginRight:10}}>|</span>
+                    <span className='cus-bottom-margin'>
+                      <Link href='#'>
+                        <a>Terms and Conditions</a>  
+                      </Link>
+                    </span>
+                    <span style={{marginLeft:10, marginRight:10}}>|</span>
+                    <span className='cus-bottom-margin'>
+                      <Link href='#'>
+                        <a>Sitemap</a>  
+                      </Link>
+                    </span>
+                  </div>
+
                 </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+              </footer>
             </body>
         </>
 

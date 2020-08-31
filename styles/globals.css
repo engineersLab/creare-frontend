@@ -89,6 +89,10 @@ a {
 .cus-form-input:focus{
   background: #fff;
 }
+.cus-journey-content{
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 @media (min-width:768px){
   .cus-header-logo{
