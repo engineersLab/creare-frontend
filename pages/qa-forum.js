@@ -22,19 +22,24 @@ const QAForum = () =>{
             </Head>
             <Sidebar/>
             <body>
-                <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                    <span style={{display:'inline-block'}} >
-                        <h3 style={{marginLeft:135, marginTop:50}} >Q/A Forum</h3>
-                    </span>
-                    <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                        {/* <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> */}
-                        <Button onClick={()=>setQShow(true)} variant='dark' style={{paddingRight:30,paddingLeft:30}}>Ask Question</Button>
-                    </span>
+                <div className='cus-header-shadow cus-desktop-header'>
+                    <div className='cus-header-content cus-header-start'>
+                        <h3>Q/A Forum</h3>
+                    </div>
+                    <div className='cus-header-content cus-header-end'>
+                        <Button onClick={()=>setQShow(true)} variant='dark' className='cus-horizontal-padding cus-right-margin' >Ask Question</Button>
+                    </div>
                 </div>
+        
+                <div className='cus-mobile-header text-center'>
+                    <h5 className='cus-mobile-header-padding'>Q/A Forum</h5>
+                    <hr className='my-4'/>
+                </div>
+                
 
-                <div style={{marginLeft:135, marginTop:50}}>
+                <div className='cus-dashboard-content cus-top-margin'>
                     <div>
-                        <Card style={{width:'50%'}}>
+                        <Card className='cus-lg-width'>
                             <Card.Body>
                                 <p style={{fontSize:11, color:'gray'}}>Q: Santhosh Grade 5 25 July 2020</p>
                                 <b style={{color:'#0D3D55'}} >How many primary colors do we have ?</b>
@@ -76,7 +81,7 @@ const QAForum = () =>{
                     </div>
 
                     <div>
-                        <Card style={{width:'50%'}}>
+                        <Card className='cus-lg-width cus-top-margin'>
                             <Card.Body>
                                 <p style={{fontSize:11, color:'gray'}}>Q: Santhosh Grade 5 25 July 2020</p>
                                 <b style={{color:'#0D3D55'}} >How many primary colors do we have ?</b>

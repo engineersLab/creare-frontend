@@ -61,35 +61,33 @@ const InstituteRegister = ({schoolType}) =>{
                 <title>Register</title>
             </Head>
 
-            <body className={utilStyles.container} >
+            <body>
                 <div className='row align-items-center' style={{height:'100vh'}}>
-                    <div className='col'>
+                    <div className='col cus-desktop-header text-center'>
                         <img src={signInImage} className='img-fluid' />
                     </div>
                     <div className='col' >
-                        <div style={{marginLeft:60}}>
-                            <img src={creareSigninLogo} className='img-fluid' style={{width:'10%',height:'10%'}} />
+                        <div className='text-center'>
+                            <img src={creareSigninLogo} className='img-fluid cus-mob-top-margin' style={{width:'10%',height:'10%'}} />   
                         </div>
-
-                        <div style={{width:'90%',marginLeft:'10%'}}>
-                            <div style={{marginBottom:30}}>
-                                <b style={{fontSize:25}} >User Registration</b>
-                            </div>
-                            
+                        <div className='text-center cus-bottom-margin'>
+                            <b className='cus-form-header-text'>User Registration</b>
+                        </div>
+                        <div className='cus-horizontal-spacing'>
                             <Form>
                                 <div style={{width:'100%',display:'inline-block'}}>
                                     <div style={{width:'46%', float:'left'}} >
                                         <Form.Group >
-                                            <b style={{fontSize:12}}>First Name</b>
-                                            <Form.Control 
+                                            <b className='cus-card-text'>First Name</b>
+                                            <Form.Control className='cus-card-text'
                                                 id={utilStyles.formInput} size="sm" type="text" 
                                                 placeholder="Enter First Name here..." onChange={(val)=>setFirstName(val.target.value)} />
                                         </Form.Group>
                                     </div>
                                     <div style={{width:'46%',float:'right'}}>
-                                    <Form.Group >
-                                            <b style={{fontSize:12}}>Last Name</b>
-                                            <Form.Control 
+                                        <Form.Group >
+                                            <b className='cus-card-text'>Last Name</b>
+                                            <Form.Control className='cus-card-text'
                                                 id={utilStyles.formInput} size="sm" type="text" 
                                                 placeholder="Enter Last Name here..." onChange={(val)=>setLastName(val.target.value)} />
                                         </Form.Group>
@@ -97,40 +95,40 @@ const InstituteRegister = ({schoolType}) =>{
                                 </div>
                                 
                                 <Form.Group >
-                                    <b style={{fontSize:12}}>Email address</b>
-                                    <Form.Control 
-                                        id={utilStyles.formInput} size="sm" type="email" 
+                                    <b className='cus-card-text'>Email address</b>
+                                    <Form.Control className='cus-card-text cus-form-input'
+                                        size="sm" type="email" 
                                         placeholder="Enter Email Id here..." onChange={(val)=>setEmail(val.target.value)} />
                                 </Form.Group>
 
                                 <Form.Group >
-                                    <b style={{fontSize:12}}>Password</b>
-                                    <Form.Control 
-                                        id={utilStyles.formInput} size="sm" type="password"
+                                    <b className='cus-card-text'>Password</b>
+                                    <Form.Control className='cus-card-text cus-form-input'
+                                        size="sm" type="password"
                                         placeholder="Enter Password here..." onChange={(val)=>setPassword(val.target.value)} />
                                 </Form.Group>
 
                                 <Form.Group>
-                                    <b style={{fontSize:12}}>Confirm Password</b>
-                                    <Form.Control 
-                                        id={utilStyles.formInput} size="sm" type="password" 
+                                    <b className='cus-card-text'>Confirm Password</b>
+                                    <Form.Control className='cus-card-text cus-form-input'
+                                        size="sm" type="password" 
                                         placeholder="Enter Password here..." onChange={(val)=>checkPassword(val.target.value)}  />
                                         {error ? <p style={{color:'red', fontSize:10}} >{error}</p> : null}
                                 </Form.Group>
 
                                 <Form.Group  >
-                                    <b style={{fontSize:12}}>Select {schoolType} School</b>
-                                    <Form.Control 
-                                        id={utilStyles.formInput} value={school} onClick={()=>setShowInstitutes(true)} size="sm" 
+                                    <b className='cus-card-text'>Select {schoolType} School</b>
+                                    <Form.Control className='cus-card-text cus-form-input'
+                                        value={school} onClick={()=>setShowInstitutes(true)} size="sm" 
                                         placeholder='Select School'
                                          >
                                              
                                          </Form.Control>
                                 </Form.Group>
                                 <Form.Group >
-                                    <b style={{fontSize:12}}>Select Role</b>
-                                    <Form.Control 
-                                        id={utilStyles.formInput} size="sm" as="select" 
+                                    <b className='cus-card-text'>Select Role</b>
+                                    <Form.Control className='cus-card-text cus-form-input'
+                                        size="sm" as="select" 
                                         onChange={(val)=>setRole(val.target.value)}  >
                                         <option value="" disabled selected>Select your Role</option>
                                         {roles.map((r)=>{
@@ -141,7 +139,7 @@ const InstituteRegister = ({schoolType}) =>{
                                 <div style={{textAlign:'center',marginTop:30}} >
                                     <span>
                                         <Form.Group controlId="formBasicCheckbox">
-                                            <Form.Check 
+                                            <Form.Check className='cus-text'
                                                 type="checkbox" label={`I Accept Terms and Conditions`} 
                                                 checked={checked} onChange={()=>!checked ? setChecked(true) : setChecked(false)} />
                                         </Form.Group>
@@ -150,7 +148,7 @@ const InstituteRegister = ({schoolType}) =>{
                                     <span>
                                             <Button 
                                                 disabled={!checked } variant="dark" 
-                                                style={{width:'auto'}}
+                                                className='cus-text'
                                                 onClick={()=>{
                                                     if(!firstName || !lastName || !role || !school || !email ){
                                                         setShow(true)

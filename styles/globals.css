@@ -31,10 +31,148 @@ a {
 .cus-download-button{
   width: 30%;
 }
+.cus-header-shadow{
+  box-shadow: 3px 3px 5px grey;
+}
+.cus-card-shadow{
+  box-shadow: 5px 5px 5px grey;
+  margin-bottom: 10px;
+}
+.cus-header-content{
+  display: inline-block;
+}
+.cus-header-start{
+  margin-left: 135px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.cus-header-start-2{
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.cus-header-end{
+  float: right;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.cus-dashboard{
+  background-color: #ebebeb;
+  overflow-x: hidden;
+}
+.cus-dashboard-card{
+  margin-top: 20px;
+}
+.cus-horizontal-spacing-2{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.cus-top-margin-2{
+  margin-top: 7px;
+}
+.cus-pointer{
+  cursor: pointer;
+}
+.cus-bottom-margin{
+  margin-bottom: 10px;
+}
+.cus-horizontal-padding{
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.cus-right-margin{
+  margin-right: 20px;
+}
+.cus-form-input{
+  background: #dbdbdb;
+}
+.cus-form-input:focus{
+  background: #fff;
+}
 
-@media (min-width:800px){
+@media (min-width:768px){
   .cus-header-logo{
       margin-left: 30px;
+  }
+  .cus-mobile-header{
+    display: none;
+  }
+  .cus-horizontal-spacing{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .cus-top-margin{
+    margin-top: 30px;
+  }
+  .cus-top-margin-3{
+    margin-top: 50px;
+  }
+  .cus-dashboard-content{
+    margin-left: 135px;
+    margin-right: 40px;
+  }
+  .cus-card-header-text{
+    font-size: large;
+  }
+  .cus-card-sub-header-text{
+    font-size: medium;
+  }
+  .cus-card-text{
+    font-size: 13px;
+  }
+  .cus-sub-display-card{
+    display: inline-block;
+    height: 130px;
+    width: 150px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .cus-sub-display-card-2{
+    display: inline-block;
+    height: 140px;
+    width: 160px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .cus-card-text-2{
+    font-size: 15px;
+    display: inline;
+  }
+  .cus-bullet{
+    display: inline-block;
+    background: #858585;
+    border-radius: 50px;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .cus-full-height{
+    height: 70vh;
+  }
+  .cus-create-class-card{
+    padding: 30px;
+    margin-right: 30px;
+    width: 250px;
+  }
+  .cus-lg-width{
+    width: 60%;
+  }
+  .cus-form-header-text{
+    font-size: x-large;
+  }
+  .cus-text{
+    font-size: 16px;
+  }
+  .cus-top-negative{
+    top: -10%;
+  }
+  .cus-vertical-margin{
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -55,8 +193,155 @@ a {
   .cus-download-button{
     width: 20%;
   }
+  .cus-dashboard-content{
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .cus-mobile-header{
+    display: none;
+  }
+  .cus-horizontal-spacing{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .cus-top-margin{
+    margin-top: 30px;
+  }
+  .cus-top-margin-3{
+    margin-top: 50px;
+  }
+  .cus-card-text{
+    font-size: 12px;
+  }
+  .cus-card-text-2{
+    font-size: 12px;
+    display: inline;
+  }
+  .cus-bullet{
+    display: inline-block;
+    background: #858585;
+    border-radius: 50px;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .cus-sub-display-card-2{
+    display: inline-block;
+    height: 140px;
+    width: 160px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .cus-full-height{
+    height: 70vh;
+  }
+  .cus-create-class-card{
+    padding: 30px;
+    margin-right: 30px;
+    width: 250px;
+  }
+  .cus-form-header-text{
+    font-size: larger;
+  }
+  .cus-text{
+    font-size: 15px;
+  }
+  .cus-vertical-margin{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
+@media (max-width:576px){
+  .cus-desktop-header{
+    display: none;
+  }
+  .cus-mob-header-img{
+    width: 60px;
+  }
+  .cus-mobile-header{
+    display: initial;
+  }
+  .cus-mobile-header-padding{
+    padding: 20px 10px 0 10px
+  }
+  .cus-horizontal-spacing{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .cus-left-margin{
+    margin-left: 20px;
+  }
+  .cus-dashboard-content{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .cus-card-header-text{
+    font-size: medium;
+  }
+  .cus-card-sub-header-text{
+    font-size: small;
+  }
+  .cus-card-text{
+    font-size: 10px;
+  }
+  .cus-card-text-2{
+    font-size: 10px;
+    display: inline;
+  }
+  .cus-bullet{
+    display: inline-block;
+    background: #858585;
+    border-radius: 50px;
+    width: 7px;
+    height: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .cus-mobile-view{
+    overflow-x: scroll;
+  }
+  .cus-sub-display-card-2{
+    display: inline-block;
+    height: 100px;
+    width: 90%;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .cus-full-height{
+    height: 90vh;
+  }
+  .cus-create-class-card{
+    padding: 30px;
+    margin-right: 30px;
+    width: 200px;
+  }
+  .cus-mob-text-center{
+    text-align: center;
+  }
+  .cus-mob-top-margin{
+    margin-top: 20px;
+  }
+  .cus-form-header-text{
+    font-size: larger;
+  }
+  .cus-text{
+    font-size: 12px;
+  }
+  .cus-top-margin-3{
+    margin-top: 20px;
+  }
+  .cus-vertical-margin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
 
 
 

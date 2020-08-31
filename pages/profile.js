@@ -15,14 +15,21 @@ const Profile = () =>{
             <Sidebar/>
             <body>
                 <div>
-                    <div style={{display:'inline-block'}}>
-                        <h3 style={{marginLeft:135, marginTop:50}} >Profile</h3>
+                    <div className='cus-header-shadow cus-desktop-header'>
+                        <div className='cus-header-content cus-header-start'>
+                            <h3>Profile</h3>
+                        </div>
+                     </div>
+           
+                    <div className='cus-mobile-header text-center'>
+                        <h5 className='cus-mobile-header-padding'>Profile</h5>
+                        <hr className='my-4'/>
                     </div>
-                    <div style={{marginLeft:135, marginRight:50, marginTop:40}} >
+                    <div className='cus-dashboard-content cus-top-margin'>
                         <Card>
                             <Card.Body>
                                 <div className='row'>
-                                    <div className='col col-md-4'>
+                                    <div className='col-sm-12 col-md-4'>
                                         <div style={{textAlign:'center'}} >
                                             <img src={profileImage} style={{marginBottom:10}} className='img-fluid'/>
                             
@@ -30,40 +37,40 @@ const Profile = () =>{
                                         </div>
                                     </div>
 
-                                    <div className='col col-md-8 '>
-                                        <div className='row  ' >
-                                            <div className='col col-md-2' >
+                                    <div className='col-sm-12 col-md-8'>
+                                        <div className='row' >
+                                            <div className='col-md-2' >
                                                 <p style={{marginTop:5, color:'gray'}}>Name</p>
                                             </div>
-                                            <div className='col col-md-6 d-flex justify-content-start'  >
+                                            <div className='col-md-6 d-flex justify-content-start'  >
                                                 <TextField fullWidth size='small' id="outlined-basic" placeholder="Name" defaultValue='Mythreyi K' variant="outlined" />
                                             </div>
                                         </div>
 
                                         <div className='row' >
-                                            <div className='col col-md-2' >
+                                            <div className='col-md-2' >
                                             <p style={{marginTop:5, color:'gray'}}>Age</p>
                                             </div>
-                                            <div className='col col-md-6 d-flex justify-content-start' >
+                                            <div className='col-md-6 d-flex justify-content-start' >
                                             <TextField fullWidth size='small' id="outlined-basic" placeholder="Age" defaultValue='14' variant="outlined" />
                                             </div>
                                         </div>
 
                                         <div className='row' >
-                                            <div className='col col-md-2' >
+                                            <div className='col-md-2' >
                                             <p style={{marginTop:5, color:'gray'}}>School</p>
                                             </div>
-                                            <div className='col col-md-6 d-flex justify-content-start' >
+                                            <div className='col-md-6 d-flex justify-content-start' >
                                             <TextField fullWidth size='small' id="outlined-basic" placeholder='School' defaultValue='Shrishti Vidyashram' variant="outlined" />
                                             </div>
                                         </div>
 
                                         <div className='row' >
-                                            <div className='col col-md-2' >
-                                            <p style={{marginTop:5, color:'gray'}}>Registration ID</p>
+                                            <div className='col-md-2' >
+                                                <p style={{marginTop:5, color:'gray'}}>Registration ID</p>
                                             </div>
-                                            <div className='col col-md-6 d-flex justify-content-start' >
-                                            <TextField fullWidth size='small' id="outlined-basic" placeholder="Registration ID" defaultValue='5656 8787 4545' variant="outlined" />
+                                            <div className='col-md-6 d-flex justify-content-start' >
+                                                <TextField fullWidth size='small' id="outlined-basic" placeholder="Registration ID" defaultValue='5656 8787 4545' variant="outlined" />
                                             </div>
                                         </div>
                                     </div>

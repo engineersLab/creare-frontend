@@ -42,7 +42,7 @@ function Home() {
         <Navbar/>
         <body>
         
-          {/* <section className='container-fluid'>
+          <section>
             <div>
               <Carousel >
                 <Carousel.Item>
@@ -59,8 +59,8 @@ function Home() {
                 </Carousel.Item>
               </Carousel>
             </div>
-          </section> */}
-          <div id="slides" class="carousel slide" data-ride="carousel">
+          </section>
+          {/* <div id="slides" class="carousel slide" data-ride="carousel">
             <ul class="carousel-indicators">
               <li data-target="#slides" data-slide-to="0" class="active"></li>
               <li data-target="#slides" data-slide-to="1"></li>
@@ -78,7 +78,7 @@ function Home() {
                 <img width="100%" src="img/bootstrap.jpg"/>
             </div>
             </div>
-          </div>
+          </div> */}
 
           <section>
             <div class='container-fluid' >
@@ -246,29 +246,29 @@ function Home() {
                     <div>
                       <p style={{color:'orange'}} >SITEMAP</p>
                     </div>
-                    <div>
+                    <div className='cus-bottom-margin'>
                       <Link href='#'>
-                        <p>Event</p>
+                        <a>Event</a>
                       </Link>
                     </div>
-                    <div>
+                    <div className='cus-bottom-margin'>
                       <Link href='#'>
-                        <p>Webinar</p>
+                        <a>Webinar</a>
                       </Link>
                     </div>
-                    <div>
+                    <div className='cus-bottom-margin'>
                       <Link href='#'>
-                        <p>Sign In</p>
+                        <a>Sign In</a>
                       </Link>
                     </div>
-                    <div>
+                    <div className='cus-bottom-margin'>
                       <Link href='#'>
-                        <p>Register Yourself</p>
+                        <a>Register Yourself</a>
                       </Link>
                     </div>
-                    <div>
+                    <div className='cus-bottom-margin'>
                       <Link href='#'>
-                        <p>Register Institute</p>
+                        <a>Register Institute</a>
                       </Link>
                     </div>
                   </div>
@@ -319,34 +319,34 @@ function Home() {
                     <div>
                       <p style={{color:'orange'}} >COMPANY</p>
                     </div>
-                    <div>
+                    <div className='cus-bottom-margin'>
                       <Link href='#'>
-                        <p>About Us</p>
+                        <a>About Us</a>
                       </Link>
                     </div>
-                    <div>
+                    <div className='cus-bottom-margin'>
                       <Link href='#'>
-                        <p>Contact Us</p>
+                        <a>Contact Us</a>
                       </Link>
                     </div>
-                    <div>
+                    <div className='cus-bottom-margin'>
                       <Link href='#'>
-                        <p>Privacy Policy</p>
+                        <a>Privacy Policy</a>
                       </Link>
                     </div>
-                    <div>
+                    <div className='cus-bottom-margin'>
                       <Link href='#'>
-                        <p>Terms and Conditions</p>
+                        <a>Terms and Conditions</a>
                       </Link>
                     </div>
-                    <div>
+                    <div className='cus-bottom-margin'>
                       <Link href='#'>
-                        <p>Refund Policy</p>
+                        <a>Refund Policy</a>
                       </Link>
                     </div>
-                    <div>
+                    <div className='cus-bottom-margin'>
                       <Link href='#'>
-                        <p>FAQ</p>
+                        <a>FAQ</a>
                       </Link>
                     </div>
                   </div>
@@ -419,27 +419,27 @@ function Home() {
               </div>
 
               <div style={{marginTop:30, fontWeight:600}}>
-                <span >
+                <span className='cus-bottom-margin'>
                   <Link href='#'>
-                    Disclaimer
+                    <a>Disclaimer</a>
                   </Link>
                 </span>
                 <span style={{marginLeft:10, marginRight:10}}>|</span>
-                <span >
+                <span className='cus-bottom-margin'>
                   <Link href='#'>
-                    Privacy Policy 
+                    <a>Privacy Policy </a>
                   </Link>
                 </span>
                 <span style={{marginLeft:10, marginRight:10}}>|</span>
-                <span >
+                <span className='cus-bottom-margin'>
                   <Link href='#'>
-                    Terms and Conditions
+                    <a>Terms and Conditions</a>  
                   </Link>
                 </span>
                 <span style={{marginLeft:10, marginRight:10}}>|</span>
-                <span>
+                <span className='cus-bottom-margin'>
                   <Link href='#'>
-                    Sitemap  
+                    <a>Sitemap</a>  
                   </Link>
                 </span>
               </div>

@@ -14,78 +14,82 @@ const Remainders = () =>{
                 <title>Remainders</title>
             </Head>
             <Sidebar pageName='remainder'/>
-            <body style={{height:'100vh'}}>
-                <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                    <span style={{display:'inline-block'}} >
-                        <h3 style={{marginLeft:135, marginTop:50}} >Remainders</h3>
-                    </span>
-                    <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                        {/* <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> */}
-                        <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>Create Remainder</Button>
-                    </span>
+            <body>
+                <div className='cus-header-shadow cus-desktop-header'>
+                    <div className='cus-header-content cus-header-start'>
+                        <h3>Remainders</h3>
+                    </div>
+                    <div className='cus-header-content cus-header-end'>
+                        <Button variant='outline-dark' style={{marginRight:20}} >Go Live</Button>
+                        <Button variant='dark' style={{marginRight:20}} >Create Remainder</Button>
+                    </div>
                 </div>
-
-                <div style={{width:'auto',marginLeft:135, marginTop:30, marginBottom:30}}>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:20, marginRight:20, cursor:'pointer'  }}>
+                <div className='cus-mobile-header text-center'>
+                    <h5 className='cus-mobile-header-padding'>Remainders</h5>
+                    <hr className='my-4'/>
+                </div>
+               
+                <div className='cus-dashboard-content cus-top-margin'>
+                    <div>
+                        <Card className='cus-sub-display-card-2 cus-card-shadow'>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Today</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:20, marginRight:20, cursor:'pointer' }}>
+                        <Card className='cus-sub-display-card-2 cus-card-shadow'>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Upcoming</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:20, marginRight:20, cursor:'pointer' }}>
+                        <Card className='cus-sub-display-card-2 cus-card-shadow'>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Completed</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
-                        <Card className={utilStyles.header_shadow} style={{height:140, width:160,display:'inline-block',marginLeft:20, marginRight:20, cursor:'pointer' }}>
+                        <Card className='cus-sub-display-card-2 cus-card-shadow'>
                             <Card.Body>
                                 <Card.Title style={{fontSize:16, fontWeight:600}}>Missed</Card.Title>
                                 <Card.Text><b>05</b></Card.Text>
                             </Card.Body>
                         </Card>
                     </div>
-                    <div style={{marginLeft:135, marginRight:50}} >
-                    <Table striped bordered hover variant="light">
-                        <thead>
-                            <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Scheduled</th>
-                            <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td>1</td>
-                            <td>Go live at 2 PM</td>
-                            <td>Sunday</td>
-                            <td><Button variant='dark' style={{float:'right'}} >Mark as Completed</Button></td>
-                            </tr>
-                            <tr>
-                            <td>2</td>
-                            <td>Maths Exam</td>
-                            <td>Tuesday</td>
-                            <td><Button variant='dark' style={{float:'right'}} >Mark as Completed</Button></td>
-                            </tr>
-                            <tr>
-                            <td>3</td>
-                            <td >Science Exam</td>
-                            <td>Monday</td>
-                            <td><Button variant='dark' style={{float:'right'}} >Mark as Completed</Button></td>
-                            </tr>
-                        </tbody>
-                    </Table>
+                    <div className='cus-mobile-view'>
+                        <Table striped bordered hover variant="light">
+                            <thead>
+                                <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Scheduled</th>
+                                <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>1</td>
+                                <td>Go live at 2 PM</td>
+                                <td>Sunday</td>
+                                <td><Button variant='dark' style={{float:'right'}} >Mark as Completed</Button></td>
+                                </tr>
+                                <tr>
+                                <td>2</td>
+                                <td>Maths Exam</td>
+                                <td>Tuesday</td>
+                                <td><Button variant='dark' style={{float:'right'}} >Mark as Completed</Button></td>
+                                </tr>
+                                <tr>
+                                <td>3</td>
+                                <td >Science Exam</td>
+                                <td>Monday</td>
+                                <td><Button variant='dark' style={{float:'right'}} >Mark as Completed</Button></td>
+                                </tr>
+                            </tbody>
+                        </Table>
                     </div>
-                    
-            </body>
-            
+                </div>
+            </body>  
         </>
     )
 }

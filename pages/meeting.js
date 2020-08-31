@@ -23,7 +23,7 @@ const Meeting = () =>{
             </Head>
 
             <body>
-                <div style={{display:'block', width:'100%', height:100}} className={utilStyles.header_shadow}>
+                <div className='cus-header-shadow cus-desktop-header'>
                     <span style={{display:'inline-block'}} >
                         <img src={creareLogo} style={{marginLeft:30}} width="100" height="100" className="d-inline-block align-top"/>
                         <div style={{ display:'inline-block', marginTop:40, marginLeft:40}}>
@@ -34,6 +34,11 @@ const Meeting = () =>{
                         {/* <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> */}
                         <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>End Call</Button>
                     </span>
+                </div>
+
+                <div className='cus-mobile-header text-center'>
+                    <h5 className='cus-mobile-header-padding'>Mr.Vishwanath's virtual classroom</h5>
+                    <hr className='my-4'/>
                 </div>
 
                 <div>

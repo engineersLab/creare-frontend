@@ -19,12 +19,12 @@ export default function dashboard(){
             <title>Dashboard</title>
             </Head>
             <Sidebar pageName='dashboard' />
-            <body style={{overflowX:'hidden', background:'#ebebeb'}}>
-                <div style={{display:'block', width:'100%', height:100}} className={utilStyles.header_shadow}>
-                    <div style={{marginLeft:135,float:'left', marginTop:40}}>
+            <body className='cus-dashboard'>
+                <div className='cus-header-shadow cus-desktop-header'>
+                    <div className='cus-header-content cus-header-start'>
                         <h3>Home</h3>
                     </div>
-                    <div style={{float:'right', marginTop:40}}>
+                    <div className='cus-header-content cus-header-end'>
                         <Button style={{display:'inline-block'}} onClick={()=>setQShow(true)}  variant='dark' style={{display:"inline",marginRight:20}} >Create New</Button>
                         <DropdownButton variant='light' style={{display:'inline-block', marginRight:50}} id="dropdown-basic-button" title="Classroom">
                             <Dropdown.Item href="#/action-1">Join Class</Dropdown.Item>
@@ -32,21 +32,27 @@ export default function dashboard(){
                         </DropdownButton>
                     </div>
                 </div>
-                <div style={{marginLeft:135, marginRight:40}} className='row flex-column flex-md-row'>
-                    <div style={{marginTop:20}} className='col col-md-5'>
-                        <Card className={utilStyles.card} style={{ marginBottom:20}}>
+
+                <div className='cus-mobile-header text-center'>
+                    <h5 className='cus-mobile-header-padding'>Home</h5>
+                    <hr className='my-4'/>
+                </div>
+
+                <div className='row cus-dashboard-content'>
+                    <div className='col-sm-12 col-md-12 col-lg-5'>
+                        <Card className='cus-card-shadow cus-dashboard-card'>
                             <Card.Body>
                             <div>
-                                <Card.Title>Notifications</Card.Title>
+                                <Card.Title className='cus-card-header-text'>Notifications</Card.Title>
                                 <List>
                                     <ListItem >
-                                        <ListItemText primary={<span style={{fontSize:13}}>You have received your timetable</span>}  />
-                                        <Button variant='light' size='sm' >Download</Button>
+                                        <ListItemText primary={<span className='cus-card-text'>You have received your timetable</span>}  />
+                                        <Button variant='light' className='cus-card-text' size='sm' >Download</Button>
                                     </ListItem>
                                     <Divider/>
                                     <ListItem >
-                                        <ListItemText primary={<span style={{fontSize:13}}>You have received your timetable</span>}  />
-                                        <Button variant='light' size='sm' >Download</Button>
+                                        <ListItemText primary={<span className='cus-card-text'>You have received your timetable</span>}  />
+                                        <Button variant='light' className='cus-card-text' size='sm' >Download</Button>
                                     </ListItem>
                                     <Divider/>
                                 </List>
@@ -54,29 +60,29 @@ export default function dashboard(){
                             </Card.Body>
                         </Card>
                         
-                        <Card className={utilStyles.card} style={{marginBottom:20}}>
+                        <Card className='cus-card-shadow cus-dashboard-card'>
                             <Card.Body>
                                 <div>
-                                    <Card.Title>Scheduled for today</Card.Title>
+                                    <Card.Title className='cus-card-header-text'>Scheduled for today</Card.Title>
                                     <p style={{fontSize:12, color:'gray'}}>Task and remainders set for today will appear here</p>
                                     <Card style={{ width:'100%', height:'auto', marginBottom:20 }}>
                                         <Card.Body>
                                             <div>
-                                                <p style={{display:'inline'}} >Exam Scheduled</p> 
-                                                <p style={{display:'inline', marginLeft:10, marginRight:10}}>Class 6</p>
-                                                <span style={{display:'inline-block', background:'#858585', borderRadius:50, width:10, height:10, marginLeft:20, marginRight:10}} ></span>
-                                                <p style={{display:'inline'}}>Science Exam</p> 
+                                                <p className='cus-card-text-2' >Exam Scheduled</p> 
+                                                <p className='cus-card-text-2 cus-horizontal-spacing-2'>Class 6</p>
+                                                <span className='cus-bullet' ></span>
+                                                <p className='cus-card-text-2'>Science Exam</p> 
                                             </div>
                                         </Card.Body>
                                     </Card>
                                     <Card style={{ width:'100%', height:'auto' }}>
                                         <Card.Body>
                                             <div>
-                                                <Card.Title >Remainder</Card.Title> 
+                                                <Card.Title className='cus-card-sub-header-text' >Remainder</Card.Title> 
                                                 <List>
                                                     <ListItem >
-                                                        <ListItemText primary={<p style={{fontSize:13}}>Take Seminar on Geometry, Chapter 8</p>}  />
-                                                        <Button variant='light' size='sm' >Mark as Completed</Button>
+                                                        <ListItemText primary={<p className='cus-card-text'>Take Seminar on Geometry, Chapter 8</p>}  />
+                                                        <Button variant='light' size='sm' className='cus-card-text' >Mark as Completed</Button>
                                                     </ListItem>
                                                     <Divider/>
                                                 </List>
@@ -90,40 +96,40 @@ export default function dashboard(){
                         </Card>
                     </div>
 
-                    <div style={{marginTop:20}} className='col col-md-7'>
-                        <Card className={utilStyles.card} style={{ width:'100%', height:'auto', marginBottom:20}}>
+                    <div className='col-sm-12 col-md-12 col-lg-7'>
+                        <Card className='cus-card-shadow cus-dashboard-card'>
                             <Card.Body>
                                 <div>
-                                    <Card.Title>Statistics</Card.Title> 
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10, marginTop:10}} >
+                                    <Card.Title className='cus-card-header-text'>Statistics</Card.Title> 
+                                    <Card className='cus-card-shadow cus-sub-display-card'>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
-                                                <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>70</p></span>
-                                                <p style={{fontSize:13, color:'gray', marginTop:7}}>Meetings</p>
+                                                <span className="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>70</p></span>
+                                                <p className='cus-card-text cus-top-margin-2'>Meetings</p>
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10,marginTop:10}}>
+                                    <Card className='cus-card-shadow cus-sub-display-card'>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>70</p></span>
-                                                <p style={{fontSize:13, color:'gray', marginTop:7}}>No of Videos</p>
+                                                <p className='cus-card-text cus-top-margin-2'>No of Videos</p>
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10,marginTop:10}}>
+                                    <Card className='cus-card-shadow cus-sub-display-card'>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>10</p></span>
-                                                <p style={{fontSize:13, color:'gray', marginTop:7}}>No of Exams</p>
+                                                <p className='cus-card-text cus-top-margin-2'>No of Exams</p>
                                             </div>
                                         </Card.Body>
                                     </Card>
-                                    <Card className={utilStyles.card} style={{display:'inline-block', height:130, width:150, marginLeft:10, marginRight:10,marginTop:10}}>
+                                    <Card className='cus-card-shadow cus-sub-display-card'>
                                         <Card.Body>
                                             <div style={{ textAlign:'center'}} >
                                             <span class="rounded-circle border border-dark"  style={{display:'inline-block', width:60, height:60}}><p style={{marginTop:15}}>2</p></span>
-                                                <p style={{fontSize:13, color:'gray', marginTop:7}}>No of Seminars</p>
+                                                <p className='cus-card-text cus-top-margin-2'>No of Seminars</p>
                                             </div>
                                         </Card.Body>
                                     </Card>
@@ -131,40 +137,40 @@ export default function dashboard(){
                             </Card.Body>
                         </Card>
                         
-                        <Card style={{marginBottom:100}} className={utilStyles.card}>
+                        <Card className='cus-card-shadow cus-dashboard-card'>
                             <Card.Body>
-                                <Card.Title>My Class</Card.Title>
+                                <Card.Title className='cus-card-header-text'>My Class</Card.Title>
                                 <Card className={utilStyles.card}>
                                     <Card.Body>
-                                        <Card.Title>Maths Class</Card.Title>
-                                        <Card.Subtitle className="mb-2 text-muted">No of Students <b>05</b></Card.Subtitle>
+                                        <Card.Title className='cus-card-sub-header-text'>Maths Class</Card.Title>
+                                        <Card.Subtitle className="mb-2 text-muted cus-card-sub-header-text">No of Students <b>05</b></Card.Subtitle>
                                         <Divider/>
                                         <div className='row align-items-center flex-column flex-md-row' style={{marginTop:30}}>
                                             <div className='col' style={{textAlign:'center'}} >
-                                                <p>No of Meetings</p>
-                                                <p>10</p>
+                                                <p className='cus-card-text'>No of Meetings</p>
+                                                <p className='cus-card-text'>10</p>
                                             </div>
                                             <div className='col' style={{textAlign:'center'}} >
-                                                <p>No of Videos</p>
-                                                <p>25</p>
+                                                <p className='cus-card-text'>No of Videos</p>
+                                                <p className='cus-card-text'>25</p>
                                             </div>
                                             <div className='col' style={{textAlign:'center'}} >
-                                                <p>No of Exams</p>
-                                                <p>05</p>
+                                                <p className='cus-card-text'>No of Exams</p>
+                                                <p className='cus-card-text'>05</p>
                                             </div>
                                             <div className='col' style={{textAlign:'center'}} >
-                                                <p>No of Handouts</p>
-                                                <p>15</p>
+                                                <p className='cus-card-text'>No of Handouts</p>
+                                                <p className='cus-card-text'>15</p>
                                             </div>
                                         </div>
                                         <div style={{width:'100%', height:'auto', background:'#dbdbdb',borderRadius:10}}>
                                             <div style={{display:'inline-block', marginInline:20, padding:20}} >
-                                                <b>Upcoming Exams</b>
-                                                <p>01 JUL 2020,01:00 PM IST</p>
+                                                <b className='cus-card-sub-header-text'>Upcoming Exams</b>
+                                                <p className='cus-card-text'>01 JUL 2020,01:00 PM IST</p>
                                             </div>
                                             <div style={{display:'inline-block'}} >
-                                                <b>Meetings Scheduled</b>
-                                                <p>01 JUL 2020,01:00 PM IST</p>
+                                                <b className='cus-card-sub-header-text cus-left-margin'>Meetings Scheduled</b>
+                                                <p className='cus-card-text cus-left-margin'>01 JUL 2020,01:00 PM IST</p>
                                             </div>
                                         </div>
                                     </Card.Body>

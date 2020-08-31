@@ -18,11 +18,11 @@ export default function NavBar(){
                 <Nav.Link style={{marginLeft:25, marginRight:25}} href="/blogs">Blogs</Nav.Link>
                 <Nav.Link style={{marginLeft:25, marginRight:25}} href="/contact-us">Contact Us</Nav.Link>
                 <Nav.Link style={{marginLeft:25, marginRight:25}} href="/meeting-room">Meeting Room</Nav.Link>
-                <Nav.Link style={{marginLeft:25, marginRight:25,color:'orange'}} href="/launch-event">Become a Freelancer</Nav.Link>
-                <Nav.Link style={{marginLeft:25, marginRight:25}} href="/meeting-room">Login</Nav.Link>
+                <Nav.Link style={{marginLeft:25, marginRight:25,color:'orange'}} href="/freelancer">Become a Freelancer</Nav.Link>
+                <Nav.Link style={{marginLeft:25, marginRight:25}} href="/signIn">Login</Nav.Link>
               </Nav>
             <Link href='/register-institute'>
-              <a className='btn btn-dark' >Register Institute</a>
+              <a className='btn btn-dark'>Register Institute</a>
             </Link>
           </Navbar.Collapse>
       </Navbar>

@@ -18,7 +18,7 @@ const JoinMeeting = () =>{
             </Head>
 
             <body>
-                <div style={{display:'block', width:'100%', height:100}} className={utilStyles.header_shadow}>
+                <div className='cus-header-shadow cus-desktop-header'>
                     <span style={{display:'inline-block'}} >
                         <img src={creareLogo} style={{marginLeft:30}} width="100" height="100" className="d-inline-block align-top"/>
                         <div style={{ display:'inline-block', marginTop:40, marginLeft:40}}>
@@ -31,14 +31,19 @@ const JoinMeeting = () =>{
                     </span>
                 </div>
 
-                <div>
-                    <div style={{marginLeft:100, marginRight:100,marginTop:30}}>
-                        <div>
+                <div className='cus-mobile-header text-center'>
+                    <h4 className='cus-mobile-header-padding'>Join Meeting</h4>
+                    <hr className='my-4'/>
+                </div>
+
+                <div className='cus-horizontal-spacing'>
+                    <div>
+                        <div className='cus-top-margin'>
                             <h5>TODAY</h5>
                         </div>
                         <div>
                             <div className='row' >
-                                <div className='col'>
+                                <div className='col-sm-12 col-md-12 col-lg-4'>
                                     <div>
                                         <div>
                                             <Card>
@@ -68,7 +73,7 @@ const JoinMeeting = () =>{
                                     </div>
                                 </div>
 
-                                <div className='col'>
+                                <div className='col-sm-12 col-md-12 col-lg-4'>
                                     <div>
                                         <div>
                                             <Card>
@@ -97,7 +102,7 @@ const JoinMeeting = () =>{
                                     </div>
                                 </div>
 
-                                <div className='col' >
+                                <div className='col-sm-12 col-md-12 col-lg-4' >
                                     <div>
                                         <div>
                                             <Card>
@@ -129,7 +134,7 @@ const JoinMeeting = () =>{
                             </div>
 
                             <div className='row' >
-                                <div className='col'>
+                                <div className='col-sm-12 col-md-12 col-lg-4'>
                                     <div>
                                         <div>
                                             <Card>
@@ -159,7 +164,7 @@ const JoinMeeting = () =>{
                                     </div>
                                 </div>
 
-                                <div className='col'>
+                                <div className='col-sm-12 col-md-12 col-lg-4'>
                                     <div>
                                         <div>
                                             <Card>
@@ -189,7 +194,7 @@ const JoinMeeting = () =>{
                                     </div>
                                 </div>
 
-                                <div className='col' >
+                                <div className='col-sm-12 col-md-12 col-lg-4' >
                                     <div>
                                         <div>
                                             <Card>
@@ -221,12 +226,12 @@ const JoinMeeting = () =>{
                             </div>
                         </div>
 
-                        <div style={{marginTop:30}}>
+                        <div >
                             <h5>UPCOMING</h5>
                         </div>
                         <div style={{paddingBottom:30}} >
                             <div className='row' >
-                                <div className='col'>
+                                <div className='col-sm-12 col-md-12 col-lg-4'>
                                     <div>
                                         <div>
                                             <Card>
@@ -256,7 +261,7 @@ const JoinMeeting = () =>{
                                     </div>
                                 </div>
 
-                                <div className='col'>
+                                <div className='col-sm-12 col-md-12 col-lg-4'>
                                     <div>
                                         <div>
                                             <Card>
@@ -285,7 +290,7 @@ const JoinMeeting = () =>{
                                     </div>
                                 </div>
 
-                                <div className='col' >
+                                <div className='col-sm-12 col-md-12 col-lg-4' >
                                     <div>
                                         <div>
                                             <Card>
@@ -317,7 +322,7 @@ const JoinMeeting = () =>{
                             </div>
 
                             <div className='row' >
-                                <div className='col'>
+                                <div className='col-sm-12 col-md-12 col-lg-4'>
                                     <div>
                                         <div>
                                             <Card>
@@ -347,7 +352,7 @@ const JoinMeeting = () =>{
                                     </div>
                                 </div>
 
-                                <div className='col'>
+                                <div className='col-sm-12 col-md-12 col-lg-4'>
                                     <div>
                                         <div>
                                             <Card>
@@ -377,7 +382,7 @@ const JoinMeeting = () =>{
                                     </div>
                                 </div>
 
-                                <div className='col' >
+                                <div className='col-sm-12 col-md-12 col-lg-4' >
                                     <div>
                                         <div>
                                             <Card>

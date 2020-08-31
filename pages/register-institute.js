@@ -97,8 +97,8 @@ const NewInstituteRegister = () =>{
                 <div style={{width:'100%',display:'inline-block'}}>
                     <div style={{width:'50%', float:'left'}}>
                         <Form.Group  >
-                            <b style={{fontSize:12}}>ID Proof</b>
-                            <Form.Control id={utilStyles.formInput} as="select" size="sm" type="text" 
+                            <b className='cus-card-text'>ID Proof</b>
+                            <Form.Control className='cus-card-text cus-form-input' as="select" size="sm" type="text" 
                                 onChange={(val)=>setIdType(val.target.value)} >
                                 <option value="" disabled  selected>Proof type</option>
                                 {idArray.map((id)=>{
@@ -127,8 +127,8 @@ const NewInstituteRegister = () =>{
                 <div style={{width:'100%',display:'inline-block'}}>
                     <div style={{width:'50%', float:'left'}}>
                         <Form.Group  >
-                            <b style={{fontSize:12}}>ID Proof</b>
-                            <Form.Control id={utilStyles.formInput} as="select" size="sm" type="text" 
+                            <b className='cus-card-text'>ID Proof</b>
+                            <Form.Control className='cus-card-text cus-form-input' as="select" size="sm" type="text" 
                                 onChange={(val)=>setIdType(val.target.value)} >
                                 <option value="" disabled  selected>Proof type</option>
                                 {idArray.map((id)=>{
@@ -161,33 +161,32 @@ const NewInstituteRegister = () =>{
                 <title>SignIn</title>
             </Head>
 
-            <body className={utilStyles.container} >
+            <body>
                 <div className='row align-items-center' style={{height:'100vh'}}>
-                    <div className='col' id={utilStyles.image} style={{marginBottom:150,paddingLeft:50}}>
+                    <div className='col cus-desktop-header text-center'>
                         <img src={signInImage} className='img-fluid' />
                     </div>
                     <div className='col'>
-                        <div style={{textAlign:'center',marginTop:20,marginLeft:'10%'}} >
-                            <img src={creareSigninLogo} className='img-fluid'/>
+                        <div className='text-center cus-top-margin'>
+                            <img src={creareSigninLogo} className='img-fluid cus-mob-top-margin' style={{width:'10%',height:'10%'}} />   
+                        </div>
+                        <div className='text-center cus-bottom-margin'>
+                            <b className='cus-form-header-text'>Institute Registration</b>
                         </div>
 
-                        <div style={{width:'75%',marginLeft:'20%'}} >
-                        <div style={{marginTop:30,marginBottom:30}}>
-                            <b style={{fontSize:25}} >Institute Registration</b>
-                        </div>
-                        
+                        <div className='cus-horizontal-spacing' >
                         <Form>
                             <Form.Group >
-                                <b style={{fontSize:12}}>Institute Name</b>
+                                <b className='cus-card-text'>Institute Name</b>
                                 <Form.Control 
-                                    id={utilStyles.formInput} size="sm" type="text" 
+                                    className='cus-card-text cus-form-input' size="sm" type="text" 
                                     placeholder="Enter your School name here..." onChange={(val)=>setInsName(val.target.value.toLowerCase())} />
                             </Form.Group>
 
                             <Form.Group >
-                                <b style={{fontSize:12}}>Institute Type</b>
+                                <b className='cus-card-text'>Institute Type</b>
                                 <Form.Control 
-                                    id={utilStyles.formInput} size="sm" as="select" 
+                                    className='cus-card-text cus-form-input' size="sm" as="select" 
                                     onChange={(val)=>setInsType(val.target.value.toLowerCase())} >
                                     <option value="" disabled selected>Select your Institute type</option>
                                     {instituteTypes.map((i)=>{
@@ -197,51 +196,51 @@ const NewInstituteRegister = () =>{
                             </Form.Group>
 
                             <Form.Group >
-                                <b style={{fontSize:12}}>Email address</b>
+                                <b className='cus-card-text'>Email address</b>
                                 <Form.Control 
-                                    id={utilStyles.formInput} size="sm" type="email" 
+                                    className='cus-card-text cus-form-input' size="sm" type="email" 
                                     placeholder="Enter Email Id here..." onChange={(val)=>setEmail(val.target.value.toLowerCase())} />
                             </Form.Group>
 
                             <div style={{width:'100%',display:'inline-block'}}>
                                 <div style={{width:'46%', float:'left'}}>
                                     <Form.Group  >
-                                        <b style={{fontSize:12}}>Phone No</b>
+                                        <b className='cus-card-text'>Phone No</b>
                                         <Form.Control 
-                                            id={utilStyles.formInput} size="sm" type='text'
+                                            className='cus-card-text cus-form-input' size="sm" type='text'
                                             placeholder="Enter Phone No here..." onChange={(val)=>setPhone(val.target.value)} />
                                     </Form.Group>
                                 </div>
                                 
                                 <div style={{width:'46%',float:'right'}}>
                                     <Form.Group  >
-                                        <b style={{fontSize:12}}>Alt Phone No</b>
+                                        <b className='cus-card-text'>Alt Phone No</b>
                                         <Form.Control 
-                                            id={utilStyles.formInput} size="sm" type='text'
+                                            className='cus-card-text cus-form-input' size="sm" type='text'
                                             placeholder="Enter Phone No here..." onChange={(val)=>setAltPhone(val.target.value)} />
                                     </Form.Group>
                                 </div>
                             </div>
 
                             <Form.Group >
-                                <b style={{fontSize:12}}>Address Line 1</b>
+                                <b className='cus-card-text'>Address Line 1</b>
                                 <Form.Control 
-                                    id={utilStyles.formInput} size="sm" type="text" 
+                                    className='cus-card-text cus-form-input' size="sm" type="text" 
                                     placeholder="Enter your address here..." onChange={(val)=>setAddOne(val.target.value.toLowerCase())} />
                             </Form.Group>
 
                             <Form.Group >
-                                <b style={{fontSize:12}}>Address Line 2</b>
+                                <b className='cus-card-text'>Address Line 2</b>
                                 <Form.Control 
-                                    id={utilStyles.formInput} size="sm" type="text" 
+                                    className='cus-card-text cus-form-input' size="sm" type="text" 
                                     placeholder="Enter your address here..." onChange={(val)=>setAddTwo(val.target.value.toLowerCase())} />
                             </Form.Group>
 
                             <div style={{width:'100%',display:'inline-block'}}>
                                 <div style={{width:'46%', float:'left'}}>
                                 <Form.Group  >
-                                        <b style={{fontSize:12}}>City</b>
-                                        <Form.Control id={utilStyles.formInput} as="select" size="sm" type="text" 
+                                        <b className='cus-card-text'>City</b>
+                                        <Form.Control className='cus-card-text cus-form-input' as="select" size="sm" type="text" 
                                             onChange={(val)=>setCity(val.target.value.toLowerCase())} >
                                             <option value=""  selected>Select City</option>
                                             {cities.map((id)=>{
@@ -253,8 +252,8 @@ const NewInstituteRegister = () =>{
                                 
                                 <div style={{width:'46%',float:'right'}}>
                                     <Form.Group  >
-                                        <b style={{fontSize:12}}>State</b>
-                                        <Form.Control id={utilStyles.formInput} as="select" size="sm" type="text" 
+                                        <b className='cus-card-text'>State</b>
+                                        <Form.Control className='cus-card-text cus-form-input' as="select" size="sm" type="text" 
                                             onChange={(val)=>setState(val.target.value.toLowerCase())} >
                                             <option value=""  selected>Select State</option>
                                             {states.map((id)=>{
@@ -267,17 +266,17 @@ const NewInstituteRegister = () =>{
                             <div style={{width:'100%',display:'inline-block' }}>
                                 <div style={{width:'46%', float:'left'}}>
                                     <Form.Group >
-                                        <b style={{fontSize:12}}>Pincode</b>
+                                        <b className='cus-card-text'>Pincode</b>
                                         <Form.Control 
-                                            id={utilStyles.formInput} size="sm" type="text" 
+                                            className='cus-card-text cus-form-input' size="sm" type="text" 
                                             placeholder="Enter Pincode" onChange={(val)=>setPincode(val.target.value)} />
                                     </Form.Group>
                                 </div>
                                 
                                 <div style={{width:'46%',float:'right'}}>
                                     <Form.Group  >
-                                        <b style={{fontSize:12}}>Country</b>
-                                        <Form.Control id={utilStyles.formInput} as="select" size="sm" type="text" 
+                                        <b className='cus-card-text'>Country</b>
+                                        <Form.Control className='cus-card-text cus-form-input' as="select" size="sm" type="text" 
                                             onChange={(val)=>setCountry(val.target.value.toLowerCase())} >
                                             <option value=""  selected>Select Country</option>
                                             {countries.map((id)=>{
@@ -291,8 +290,8 @@ const NewInstituteRegister = () =>{
                             <div style={{width:'100%',display:'inline-block'}}>
                                 <div style={{width:'50%', float:'left'}}>
                                     <Form.Group  >
-                                        <b style={{fontSize:12}}>ID Proof</b>
-                                        <Form.Control id={utilStyles.formInput} as="select" size="sm" type="text" 
+                                        <b className='cus-card-text'>ID Proof</b>
+                                        <Form.Control className='cus-card-text cus-form-input' as="select" size="sm" type="text" 
                                             onChange={(val)=>setIdType(val.target.value)} >
                                             <option value="" disabled selected>Proof type</option>
                                             {idArray.map((id)=>{
@@ -308,6 +307,7 @@ const NewInstituteRegister = () =>{
                                             label="Upload ID"
                                             custom 
                                             onChange={handleChange} 
+                                            className='cus-text'
                                         />
                                 </div>
                             </div>

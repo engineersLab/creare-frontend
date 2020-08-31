@@ -17,16 +17,16 @@ const signIn = () =>{
 
             <body className={utilStyles.container} >
                 <div className='row align-items-center' style={{height:'90vh'}}>
-                    <div className='col'>
+                    <div className='col cus-desktop-header'>
                         <img src={signInImage} className='img-fluid' />
                     </div>
                     <div className='col'>
                         <div style={{textAlign:'center'}} >
-                            <img src={creareSigninLogo} className='img-fluid'/>
+                            <img src={creareSigninLogo} className='img-fluid cus-mob-top-margin'/>
                         </div>
 
                         <div>
-                        <div style={{marginTop:30,marginBottom:30}}>
+                        <div className='cus-vertical-margin'>
                             <b style={{fontSize:25}} >Log In</b>
                         </div>
                         

@@ -15,38 +15,35 @@ const ScheduleMeeting = () =>{
             </Head>
 
             <body style={{overflowX:'hidden'}} >
-                <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                    <span style={{display:'inline-block'}} >
-                        <img src={creareLogo} style={{marginLeft:30}} width="100" height="100" className="d-inline-block align-top"/>
-                        <div style={{ display:'inline-block', marginTop:40, marginLeft:40}}>
-                        <h3>Schedule Class</h3>
-                        </div>
-                        
-                    </span>
-                    <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                        {/* <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> */}
-                        {/* <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>Ask Question</Button> */}
-                    </span>
+                <div className='cus-header-shadow cus-desktop-header'>
+                    <img src={creareLogo} style={{marginLeft:30}} width="100" height="100" className="d-inline-block align-top"/>
+                    <div className='cus-header-content cus-header-start-2'>
+                        <h3>Schedule Meeting</h3>
+                    </div>
+                </div>
+                <div className='cus-mobile-header text-center'>
+                    <h5 className='cus-mobile-header-padding'>Schedule Meeting</h5>
+                    <hr className='my-4'/>
                 </div>
 
-                <div style={{marginLeft:100, marginRight:100, marginTop:70}} >
+                <div className='cus-dashboard-content cus-top-margin-3' >
                     <div className='row' >
                         <div className='col' >
                             <div>
                                 <Form>
                                     <Form.Group controlId="formTopic">
-                                        <Form.Label style={{fontWeight:600}} >Topic</Form.Label>
-                                        <Form.Control id={utilStyles.formInput} type="text" placeholder="Topic of meeting" />
+                                        <b className='cus-card-text'>Topic</b>
+                                        <Form.Control className='cus-card-text cus-form-input' type="text" placeholder="Topic of meeting" />
                                     </Form.Group>
 
                                     <Form.Group controlId="formSpeaker">
-                                        <Form.Label style={{fontWeight:600}} >Guest Speaker</Form.Label>
-                                        <Form.Control id={utilStyles.formInput} type="text" placeholder="Guest Speaker" />
+                                    <b className='cus-card-text'>Guest Speaker</b>
+                                        <Form.Control className='cus-card-text cus-form-input' type="text" placeholder="Guest Speaker" />
                                     </Form.Group>
-                                    <Form.Label style={{fontWeight:600}} >Start</Form.Label>
+                                    <b className='cus-card-text'>Start</b>
                                     <Row> 
                                         <Col>
-                                        <Form.Control id={utilStyles.formInput} as="select" >
+                                        <Form.Control className='cus-card-text cus-form-input' as="select" >
                                             <option selected disabled > Date</option>
                                             <option>1</option>
                                             <option>2</option>
@@ -57,7 +54,7 @@ const ScheduleMeeting = () =>{
                                         </Col>
 
                                         <Col>
-                                        <Form.Control id={utilStyles.formInput} as="select" >
+                                        <Form.Control className='cus-card-text cus-form-input' as="select" >
                                             <option selected disabled >Time</option>
                                             <option>00:00</option>
                                             <option>01:00</option>
@@ -68,10 +65,10 @@ const ScheduleMeeting = () =>{
                                         </Col>
                                     </Row>
 
-                                    <Form.Label style={{fontWeight:600, marginTop:15}} >Duration</Form.Label>
+                                    <b className='cus-card-text cus-top-margin'>Duration</b>
                                     <Row> 
                                         <Col>
-                                        <Form.Control id={utilStyles.formInput} as="select" >
+                                        <Form.Control className='cus-card-text cus-form-input' as="select" >
                                             <option selected disabled > HRS</option>
                                             <option>1</option>
                                             <option>2</option>
@@ -82,7 +79,7 @@ const ScheduleMeeting = () =>{
                                         </Col>
 
                                         <Col>
-                                        <Form.Control id={utilStyles.formInput} as="select" >
+                                        <Form.Control className='cus-card-text cus-form-input' as="select" >
                                             <option selected disabled >MIN</option>
                                             <option>00:00</option>
                                             <option>01:00</option>
@@ -93,14 +90,14 @@ const ScheduleMeeting = () =>{
                                         </Col>
                                     </Row>
                                     <Form.Group style={{marginTop:30}} controlId="formRecurring">
-                                        <Form.Check type="checkbox" label="Recurring Meeting" />
+                                        <Form.Check className='cus-text' type="checkbox" label="Recurring Meeting" />
                                     </Form.Group>
                                 </Form>
-                                <Button style={{marginTop:30}} variant='dark'>Schedule Meeting</Button>
+                                <Button className='cus-text' style={{marginTop:30}} variant='dark'>Schedule Meeting</Button>
                             </div>
                         </div>
 
-                        <div className='col' >
+                        <div className='col cus-desktop-header' >
                             <div className='d-flex justify-content-center'>
                                 <img src={letsCreare} className='img-fluid' />
                             </div>

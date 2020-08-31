@@ -13,18 +13,22 @@ const AdminReport = () =>{
                     <title>Report</title>
                 </Head>
 
-                <body style={{overflowX:'hidden'}} >
-                    <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                        <span style={{display:'inline-block'}} >
-                            <h3 style={{marginLeft:55, marginTop:50}} >Reports</h3>
-                        </span>
-                        <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                            <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Download</Button> 
-                            {/* <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>Create Remainder</Button>  */}
-                        </span>
+                <body>
+                    <div className='cus-header-shadow cus-desktop-header'>
+                        <div className='cus-header-content cus-header-start'>
+                            <h3>Reports</h3>
+                        </div>
+                        <div className='cus-header-content cus-header-end'>
+                            <Button variant='outline-dark' style={{marginRight:20}} >Download</Button>
+                        </div>
+                    </div>
+            
+                    <div className='cus-mobile-header text-center'>
+                        <h5 className='cus-mobile-header-padding'>Reports</h5>
+                        <hr className='my-4'/>
                     </div>
 
-                    <div>
+                    <div className='cus-mobile-view'>
                         <div style={{marginTop:30, marginLeft:30, marginRight:30}}>
                             <Table striped bordered hover variant="light">
                                 <thead>

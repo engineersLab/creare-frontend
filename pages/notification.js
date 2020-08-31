@@ -1,6 +1,5 @@
 import Sidebar from '../components/sidebar'
 import Head from 'next/head'
-import utilStyles from '../components/utilStyles.module.css'
 import {Card, Button} from 'react-bootstrap'
 import {List, ListItem, ListItemText,Divider} from '@material-ui/core'
 
@@ -13,45 +12,46 @@ const Notification = () =>{
             </Head>
             <Sidebar pageName='notification' />
             <body style={{height:'100vh'}}>
-                <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                    <span style={{display:'inline-block'}} >
-                        <h3 style={{marginLeft:135, marginTop:50}} >Notifications</h3>
-                    </span>
-                    <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                        {/* <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> */}
-                        {/* <Button onClick={()=>setQShow(true)} variant='dark' style={{paddingRight:30,paddingLeft:30}}>Ask Question</Button> */}
-                    </span>
+                <div className='cus-header-shadow cus-desktop-header'>
+                    <div className='cus-header-content cus-header-start'>
+                        <h3>Notifications</h3>
+                    </div>
+                </div>
+        
+                <div className='cus-mobile-header text-center'>
+                    <h5 className='cus-mobile-header-padding'>Notifications</h5>
+                    <hr className='my-4'/>
                 </div>
 
-                <div>
-                    <Card className={utilStyles.card} style={{ marginLeft:135,marginTop:20, marginRight:50, marginBottom:20}}>
+                <div className='cus-dashboard-content'>
+                    <Card className='cus-dashboard-card'>
                         <Card.Body>
                             <div>
-                                <Card.Title style={{fontSize:20, fontWeight:600}}>Notifications</Card.Title>
+                                <Card.Title className='cus-card-header-text'>Notifications</Card.Title>
                                 <List>
-                                    <p style={{fontWeight:600}}>Today</p>
+                                    <Card.Title className='cus-card-sub-header-text' >Today</Card.Title>
                                     <ListItem >
-                                        <ListItemText primary={<span style={{fontSize:13}}>You have received your timetable</span>}  />
-                                        <Button variant='light' size='sm' >Download</Button>
+                                        <ListItemText primary={<span className='cus-card-text'>You have received your timetable</span>}  />
+                                        <Button className='cus-card-text' variant='light' size='sm' >Download</Button>
                                     </ListItem>
                                     <Divider/>
                                     <ListItem >
-                                        <ListItemText primary={<span style={{fontSize:13}}>You have received your timetable</span>}  />
-                                        <Button variant='light' size='sm' >Download</Button>
+                                        <ListItemText primary={<span className='cus-card-text'>You have received your timetable</span>}  />
+                                        <Button className='cus-card-text' variant='light' size='sm' >Download</Button>
                                     </ListItem>
                                     <Divider/>
                                 </List>
 
                                 <List>
-                                    <p style={{fontWeight:600}}>Yesterday</p>
+                                    <Card.Title className='cus-card-sub-header-text' >Yesterday</Card.Title>
                                     <ListItem >
-                                        <ListItemText primary={<span style={{fontSize:13}}>You have received your timetable</span>}  />
-                                        <Button variant='light' size='sm' >Download</Button>
+                                        <ListItemText primary={<span className='cus-card-text'>You have received your timetable</span>}  />
+                                        <Button className='cus-card-text' variant='light' size='sm' >Download</Button>
                                     </ListItem>
                                     <Divider/>
                                     <ListItem >
-                                        <ListItemText primary={<span style={{fontSize:13}}>You have received your timetable</span>}  />
-                                        <Button variant='light' size='sm' >Download</Button>
+                                        <ListItemText primary={<span className='cus-card-text'>You have received your timetable</span>}  />
+                                        <Button className='cus-card-text' variant='light' size='sm' >Download</Button>
                                     </ListItem>
                                     <Divider/>
                                 </List>

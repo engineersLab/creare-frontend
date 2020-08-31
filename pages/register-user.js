@@ -20,14 +20,14 @@ const getStarted = () =>{
 
             <body className={utilStyles.container} >
                 <div className='row align-items-center' style={{height:'100vh'}}>
-                    <div className='col' id={utilStyles.image}>
+                    <div className='col cus-desktop-header'>
                         <img src={signInImage} className='img-fluid'  />
                     </div>
-                    <div className='col' style={{top:'-10%'}}>
+                    <div className='col cus-top-negative'>
                         <div style={{textAlign:'center'}} >
-                            <img src={creareSigninLogo} className='img-fluid' style={{marginTop:'10%'}}/>
+                            <img src={creareSigninLogo} className='img-fluid cus-mob-header-img'/>
                         </div>
-                        <div style={{width:'70%',marginLeft:'20%'}} >
+                        <div className='cus-horizontal-spacing' >
                             <div style={{marginTop:30,marginBottom:50}}>
                                 <b style={{fontSize:25}} >Get Started</b><br/>
                                 <Link href='/screens/signIn'>
@@ -83,7 +83,7 @@ const getStarted = () =>{
                                     </div>
                                     :
                                     <div className='flex-column flex-md-row d-flex justify-content-md-around'>
-                                        <span  >
+                                        <span className='text-center' >
                                             <Link href={{pathname: '/register-domestic-user',query:{instType:instituteType}}}  >
                                                 <Button variant="dark" type="submit" style={{width:'auto'}} >
                                                     Domestic {instituteType}
@@ -91,10 +91,10 @@ const getStarted = () =>{
                                             </Link>
                                         </span>
                                         
-                                        <span >
+                                        <span className='text-center'>
                                             (or)
                                         </span>
-                                        <span>
+                                        <span className='text-center'>
                                             <Link href='/register-overseas-user' >
                                                 <Button variant="dark" type="submit" style={{width:'auto'}} >
                                                     Overseas {instituteType}
