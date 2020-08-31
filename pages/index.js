@@ -257,17 +257,17 @@ function Home() {
                       </Link>
                     </div>
                     <div className='cus-bottom-margin'>
-                      <Link href='#'>
+                      <Link href='/signIn'>
                         <a>Sign In</a>
                       </Link>
                     </div>
                     <div className='cus-bottom-margin'>
-                      <Link href='#'>
+                      <Link href='/register-user'>
                         <a>Register Yourself</a>
                       </Link>
                     </div>
                     <div className='cus-bottom-margin'>
-                      <Link href='#'>
+                      <Link href='/register-institute'>
                         <a>Register Institute</a>
                       </Link>
                     </div>
@@ -390,31 +390,41 @@ function Home() {
                   <p style={{fontWeight:600}}>Study at ease</p>
                 </div>
                 <div>
-                  <p>Content</p>
+                  <p>Creare aspires to overthrow the complexity associated with education. The complexity drives a
+                      wedge between the students and the process of learning. We provide education seriously with
+                      fun. Empowering and engaging them with brain freezing activities with the help our artificial
+                      intelligence. We do not stop at engaging them we are here to promote the logical thinking and
+                      problem solving methods side by side to sustain the increase of digital based world.</p>
+                <p>
+                  The perks of our campus set up include digital classroom, Partnering with government and
+                  private institutions and student friendly campus.
+                </p>
                 </div>
                 <div>
                   <p style={{fontWeight:600}}>One stop destination</p>
                 </div>
                 <div>
-                  <p>Content</p>
-                </div>
-                <div>
-                  <p style={{fontWeight:800}}>How is it going to impact?</p>
-                </div>
-                <div>
-                  <p>Content</p>
+                  <p>Creare is a one stop destination for an individual who is willing to grow in and out. We are a
+                    perfect blend of platform providing both school and after school education. This in turn makes
+                    them dynamic at every point in life.</p>
                 </div>
                 <div>
                   <p style={{fontWeight:800}}>Necessary steps to get affiliated</p>
                 </div>
                 <div>
-                  <p>Content</p>
+                  <p>Creare is breaking the barriers of monopoly and is a one of its kind company seeking the
+                      approval of the Indian government. We invite the fresh minds to brace our initiation and
+                      empower our budding ed-tech skill based learning company to seek the shore of success.</p>
                 </div>
                 <div>
                   <p style={{fontWeight:800}}>How is it going to impact?</p>
                 </div>
                 <div>
-                  <p>Content</p>
+                  <p>With the enlarging gap between the powerful younger minds and the educational system Creare
+                    will focus on bridging the compatibility of technology and education. This will bring about the
+                    changes in the literacy rate and generate students who are well suited and specialized in their
+                    stream of job opportunities. We are also aiming to get hold of the rural students and the
+                    downtrodden to benefit from our services and raise their standard of living.</p>
                 </div>
               </div>
 
@@ -446,46 +456,6 @@ function Home() {
 
             </div>
           </footer>
-          
-          {/* <footer style={{marginTop:100}}>
-            <div className={utilStyles.footer} style={{backgroundColor:'#0E3C54',color:'white'}} >
-              <div className='row align-items-center flex-column flex-md-row'>
-                <div className='col'  >
-                  <p style={{textAlign:'center'}} >Follow US</p>
-                  <div style={{textAlign:'center'}}>
-                    <a href='#'>
-                    <img src={facebook} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
-                    </a>
-                    <a href='#'>
-                    <img src={instagram} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
-                    </a>
-                    <a href='#'>
-                    <img src={linkedIn} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
-                    </a>
-                    <a href='#'>
-                    <img src={twitter} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
-                    </a>
-                    <a href='#'>
-                    <img src={youtube} style={{height:20,marginLeft:10, marginRight:10}} className='img-fluid' />
-                    </a>
-                    
-                  </div>    
-                </div>
-                <div className='col d-flex justify-content-center' >
-                  <div className={utilStyles.footer_text}>
-                    <p>Email Id</p>
-                    <p>info@crearefoundation.com</p>
-                  </div> 
-                </div>
-                <div className='col d-flex justify-content-center' >
-                  <div className={utilStyles.footer_text}>
-                    <p>Phone Number</p>
-                    <p>+91 893 989 0562</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </footer> */}
         </body>
       </>
   )
