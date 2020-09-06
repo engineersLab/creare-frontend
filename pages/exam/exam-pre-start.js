@@ -14,40 +14,47 @@ const ExamStart = () =>{
                 </title>
 
                 <body style={{overflowX:'hidden'}}>
-                    <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                        <span style={{display:'inline-block'}} >
-                            <h4 style={{marginLeft:50, marginTop:50}} >Take Exam</h4>
-                        </span>
-                        <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                            <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>Start</Button>
-                        </span>
+                    <div className='cus-header-shadow cus-desktop-header'>
+                        <div className='cus-header-content cus-header-start-2'>
+                            <h3>Take Exam</h3>
+                        </div>
+                        <div className='cus-header-content cus-header-end'>
+                            {/* <Button variant='outline-dark' style={{marginRight:20}} >Go Live</Button> */}
+                            <Button variant='dark' className='cus-horizontal-padding cus-right-margin'>Start</Button>
+                        </div>
+                     </div>
+           
+                    <div className='cus-mobile-header text-center'>
+                        <h5 className='cus-mobile-header-padding cus-inline-block'>Take Exam</h5>
+                        <Button variant='dark' className='cus-horizontal-padding cus-inline-block cus-float-right cus-right-margin cus-mob-top-margin-2'>Start</Button>
+                        <hr className='my-4'/>
                     </div>
 
                     <div>
-                        <div className='row'>
-                            <div className='col col-md-4'>
-                                <div style={{marginLeft:70, marginTop:50, marginRight:30}}>
-                                    <Card>
+                        <div className='row cus-top-margin'>
+                            <div className='col-sm-12 col-md-12 col-lg-4'>
+                                <div className='cus-horizontal-spacing-2'>
+                                    <Card className='cus-card-shadow'>
                                         <Card.Body>
-                                            <Card.Title>
+                                            <Card.Title className='cus-card-header-text'>
                                                 Guidelines:
                                             </Card.Title>
                                             <br/>
                                             <ul>
-                                                <li>Foam ear plugs to reduce noise are allowed and will also be available during the exam.</li>
+                                                <li><p className='cus-card-text-3'>Foam ear plugs to reduce noise are allowed and will also be available during the exam.</p></li>
                                                 <br/>
-                                                <li>Students may only bring an iPad and pencils/pen to the exam, unless otherwise instructed</li>
+                                                <li><p className='cus-card-text-3'>Students may only bring an iPad and pencils/pen to the exam, unless otherwise instructed</p></li>
                                             </ul>
                                         </Card.Body>
                                     </Card>
                                 </div>
                             </div>
-                            <div className='col col-md-8'>
-                                <div style={{marginRight:70, marginTop:50, marginLeft:30}}>
-                                    <Card>
+                            <div className='col-sm-12 col-md-12 col-lg-8'>
+                                <div className='cus-horizontal-spacing-2'>
+                                    <Card className='cus-card-shadow'>
                                         <Card.Body>
                                             <div style={{ display:'block',  marginBottom:50}} className='d-flex justify-content-center'  >
-                                                <div style={{width:'50%',borderRadius:20, padding:30,background:'gray'}} >
+                                                <div className='cus-desktop-width' style={{borderRadius:20, padding:30,background:'gray'}} >
                                                     <h2 className='d-flex justify-content-center'>Science Exam</h2>
                                                     <h4 className='d-flex justify-content-center'>Class 6</h4>
                                                 </div>
@@ -55,7 +62,7 @@ const ExamStart = () =>{
                                             </div>
 
                                             <div style={{display:'block'}} className='d-flex justify-content-center' >
-                                                <div style={{width:'50%',borderRadius:20, padding:30,background:'gray',marginBottom:50}}>
+                                                <div className='cus-desktop-width' style={{borderRadius:20, padding:30,background:'gray',marginBottom:50}}>
                                                     <p style={{fontSize:20}} className='d-flex justify-content-center'>Time duration (in mins)</p>
                                                     <b style={{fontSize:20}} className='d-flex justify-content-center'>30</b>
                                                 </div> 

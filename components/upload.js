@@ -28,21 +28,22 @@ const Upload = ({type}) =>{
                 <title>Upload</title>
             </Head>
             <body style={{overflowX:'hidden'}}>
-                <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                    <span style={{display:'inline-block'}} >
-                        <h4 style={{marginLeft:50, marginTop:50}} >Upload  {type} </h4>
-                    </span>
-                    <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                        {/* <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> */}
-                        {/* <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>Submit</Button> */}
-                    </span>
+                <div className='cus-header-shadow cus-desktop-header'>
+                    <div className='cus-header-content cus-header-start-2'>
+                        <h3>Upload {type}</h3>
+                    </div>
+                </div>
+        
+                <div className='cus-mobile-header text-center'>
+                    <h5 className='cus-mobile-header-padding'>Upload {type}</h5>
+                    <hr className='my-4'/>
                 </div>
 
                 <div >
                     <div className='row'>
-                        <div className='col'>
-                            <div style={{marginLeft:70, marginTop:50, marginRight:70}}>
-                                <Card>
+                        <div className='col-sm-12 col-md-12 col-lg-6'>
+                            <div className='cus-horizontal-spacing cus-top-margin'>
+                                <Card className='cus-card-shadow'>
                                     <Card.Body>
                                         <p>1. Select the class</p>
                                         <Form.Control 
@@ -70,9 +71,9 @@ const Upload = ({type}) =>{
                             </div>
                         </div>
 
-                        <div className='col'>
-                            <div style={{marginLeft:20 ,marginTop:50}} className='d-flex' >
-                                <Card className={utilStyles.card} style={{width:'80%'}} >
+                        <div className='col-sm-12 col-md-12 col-lg-6'>
+                            <div className='cus-horizontal-spacing cus-top-margin'>
+                                <Card className='cus-card-shadow'>
                                     <Card.Body>
                                         <div style={{textAlign:'center', padding:30}} >
                                             <Form.File 

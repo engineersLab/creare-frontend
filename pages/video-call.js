@@ -16,21 +16,22 @@ const AdminDashboard = ()=>{
             {/* <Sidebar/> */}
             
             <body style={{overflowX:'hidden'}} >
-                <div style={{display:'block', width:'100%', height:100}} className={utilStyles.header_shadow}>
-                    <span style={{display:'inline-block'}} >
-                        <h3 style={{marginLeft:55, marginTop:50}} >Live Meeting</h3>
-                    </span>
-                    {/* <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                        <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> 
-                        <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>Create Remainder</Button> 
-                    </span> */}
+                <div className='cus-header-shadow cus-desktop-header'>
+                    <div className='cus-header-content cus-header-start-2'>
+                        <h3>Live Meeting</h3>
+                    </div>
                 </div>
-                <div style={{marginLeft:100,marginTop:30}}>
+        
+                <div className='cus-mobile-header text-center'>
+                    <h5 className='cus-mobile-header-padding'>Live Meeting</h5>
+                    <hr className='my-4'/>
+                </div>
+                <div className='cus-horizontal-spacing cus-top-margin'>
                     <div className='row'>
-                        <div className='col col-md-8'>
-                            <Card  >
+                        <div className='col-sm-12 col-md-12 col-lg-8'>
+                            <Card>
                                 <Card.Body>
-                                    <div className='row ' >
+                                    <div className='row' >
                                         <div className='col d-flex justify-content-md-around '>
                                             <img style={{height:150}} src={video} className='img-fluid'/>
                                         </div>
@@ -68,8 +69,8 @@ const AdminDashboard = ()=>{
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div  className='col col-md-4'>
-                            <Card style={{marginRight:100, height:300}}  >
+                        <div  className='col-sm-12 col-md-12 col-lg-4'>
+                            <Card className='cus-mob-top-margin' style={{ height:300}}  >
                                 <Card.Body>
                                     <h5>Class 6</h5>
                                     <div>
@@ -94,7 +95,7 @@ const AdminDashboard = ()=>{
                                     </div>
                                 </Card.Body>
                             </Card>
-                            <Card style={{marginRight:100, marginTop:5,height:300 }} >
+                            <Card className='cus-top-margin-2' style={{height:300}} >
                                 <Card.Body>
                                     <h5>Forum</h5>
                                     <div>

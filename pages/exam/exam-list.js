@@ -1,8 +1,7 @@
 import {useState} from 'react'
 import Head from 'next/head'
 import {Button, Form, Card} from 'react-bootstrap'
-import utilStyles from '../../components/utilStyles.module.css'
-import {TextField, InputAdornment, InputBase, List, ListItem, Divider} from '@material-ui/core'
+import {List, ListItem, Divider} from '@material-ui/core'
 
 
 const ExamList = () =>{
@@ -11,53 +10,67 @@ const ExamList = () =>{
             <Head>
                 <title>Exam List</title>
             </Head>
-            <body style={{overflowX:'hidden' }}>
-            <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                <span style={{display:'inline-block'}} >
-                    <h4 style={{marginLeft:50, marginTop:50}} >Prepare Exam Q/A</h4>
-                </span>
-                {/* <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                    <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button>
-                    <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>Publish</Button>
-                </span> */}
-            </div>
-                <div style={{width:'100%', height:'100%', marginTop:50, marginLeft:50}} >
-                    <Card style={{width:'50%'}} >
+            <body style={{overflowX:'hidden'}}>
+                <div className='cus-header-shadow cus-desktop-header'>
+                    <div className='cus-header-content cus-header-start-2'>
+                        <h3>Prepare Exam Q/A</h3>
+                    </div>
+                </div>
+        
+                <div className='cus-mobile-header text-center'>
+                    <h5 className='cus-mobile-header-padding'>Prepare Exam Q/A</h5>
+                    <hr className='my-4'/>
+                </div>
+    
+                <div className='cus-dashboard-content-2 cus-top-margin'>
+                    <Card>
                         <Card.Body>
-                            <Card.Title>
+                            <Card.Title className='cus-card-header-text'>
                                 List of Exams Scheduled
                             </Card.Title>
-                            <List >
-                                <ListItem >
-                                    <div className='d-flex justify-content-md-between' style={{width:'100%'}}>
-                                        <p style={{display:'inline', marginLeft:20, marginRight:10}}>Class 6</p>
-                                        <span style={{display:'inline'}} >
-                                            <span style={{display:'inline-block', background:'#858585', borderRadius:50, width:10, height:10, marginLeft:20, marginRight:10}} ></span>
-                                            <p style={{display:'inline'}}>Science Exam</p> 
+                            <List>
+                                <ListItem>
+                                    <div className='d-flex justify-content-between' style={{width:'100%'}}>
+                                        <span>
+                                            <p className='cus-card-text-2'>Class 6</p>
                                         </span>
-                                        <Button variant='dark' style={{display:'inline', float:'right'}} >Take Exam</Button>
+                                        <span className='cus-inline'>
+                                            <span className='cus-bullet'></span>
+                                            <p className='cus-card-text-2'>Science Exam</p> 
+                                        </span>
+                                        <span>
+                                            <Button variant='dark' className='cus-card-text-2' >Take Exam</Button>
+                                        </span>
                                     </div>
                                 </ListItem>
                                 <Divider/>
                                 <ListItem style={{marginTop:20}}>
-                                    <div className='d-flex justify-content-md-between' style={{width:'100%'}}>
-                                        <p style={{display:'inline', marginLeft:20, marginRight:10}}>Class 9</p>
-                                        <span style={{display:'inline'}} >
-                                            <span style={{display:'inline-block', background:'#858585', borderRadius:50, width:10, height:10, marginLeft:20, marginRight:10}} ></span>
-                                            <p style={{display:'inline'}}>Maths Exam</p> 
+                                    <div className='d-flex justify-content-between' style={{width:'100%'}}>
+                                        <span>
+                                            <p className='cus-card-text-2'>Class 9</p>
+                                        </span>
+                                        <span className='cus-inline'>
+                                            <span className='cus-bullet' ></span>
+                                            <p className='cus-card-text-2'>Maths Exam</p> 
+                                        </span> 
+                                        <span>
+                                            <p className='cus-card-text-2' >24 June 2020</p>
                                         </span>                                       
-                                        <p style={{display:'inline', float:'right'}} >24 June 2020</p>
                                     </div>
                                 </ListItem>
                                 <Divider/>
                                 <ListItem style={{marginTop:20}}>
-                                    <div className='d-flex justify-content-md-between' style={{width:'100%'}}>
-                                        <p style={{display:'inline', marginLeft:20, marginRight:10}}>Class 8</p>
-                                        <span style={{display:'inline'}} >
-                                            <span style={{display:'inline-block', background:'#858585', borderRadius:50, width:10, height:10, marginLeft:20, marginRight:10}} ></span>
-                                            <p style={{display:'inline'}}>Social Exam</p> 
-                                        </span>                                       
-                                        <p style={{display:'inline', float:'right'}} >20 June 2020</p>
+                                    <div className='d-flex justify-content-between' style={{width:'100%'}}>
+                                        <span>
+                                            <p className='cus-card-text-2'>Class 8</p>
+                                        </span>
+                                        <span className='cus-inline'>
+                                            <span className='cus-bullet'></span>
+                                            <p className='cus-card-text-2'>Social Exam</p> 
+                                        </span> 
+                                        <span>
+                                            <p className='cus-card-text-2'>20 June 2020</p>
+                                        </span>                                      
                                     </div>
                                 </ListItem>
                                 <Divider/>

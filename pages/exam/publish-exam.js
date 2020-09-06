@@ -14,7 +14,7 @@ const PublishExam = () =>{
             <body>
                 <div>
                     <div style={{position:'absolute', display:'block',width:'100%', top:'30%'}} className='d-flex justify-content-center' >
-                        <Card className={utilStyles.card} style={{width:'40%'}} >
+                        <Card className='cus-card-shadow cus-horizontal-spacing-2'>
                             <Card.Body>
                                 <div style={{textAlign:'center', padding:30}} >
                                     <img style={{marginBottom:20}} src={success} className='img-fluid'/>

@@ -12,96 +12,98 @@ const PreviewExam = () =>{
         </Head>
 
         <body style={{overflowX:'hidden'}}>
-            <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                <span style={{display:'inline-block'}} >
-                    <h4 style={{marginLeft:50, marginTop:50}} >Prepare Exam Q/A</h4>
-                </span>
-                <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                    {/* <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> */}
-                    <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>Publish</Button>
-                </span>
+            
+            <div className='cus-header-shadow cus-desktop-header'>
+                <div className='cus-header-content cus-header-start-2'>
+                    <h3>Prepare Exam Q/A</h3>
+                </div>
+                <div className='cus-header-content cus-header-end'>
+                    {/* <Button variant='outline-dark' style={{marginRight:20}} >Go Live</Button> */}
+                    <Button variant='dark' className='cus-horizontal-padding cus-right-margin'>Publish</Button>
+                </div>
+            </div>
+    
+            <div className='cus-mobile-header text-center'>
+                <h5 className='cus-mobile-header-padding cus-inline-block'>Prepare Exam Q/A</h5>
+                <Button variant='dark' className='cus-horizontal-padding cus-inline-block cus-float-right cus-right-margin cus-mob-top-margin-2'>Publish</Button>
+                <hr className='my-4'/>
             </div>
 
-            <div style={{marginBottom:50}}>
-                <div className='row' >
-
-                    <div className='col col-md-4' >
-                        <div style={{marginLeft:70, marginTop:50, marginRight:30}}>
-                            <Card className={utilStyles.card}>
-                                <Card.Body>
-                                    <div className='row' style={{marginBottom:20}} >
-                                        <span className='col'>Class</span>
-                                        <span className='col'>Class 6</span>
-                                    </div>
-                                    <div className='row' style={{marginBottom:20}} >
-                                        <span className='col'>Time Duration (in mins)</span>
-                                        <span className='col'>60</span>
-                                    </div>
-                                    <div>
-                                        <p>Guidelines:</p>
-                                        <ul>
-                                            <li>Foam ear plugs to reduce noise are allowed and will also be available during the exam.</li>
-                                            <li>Students may only bring an iPad and pencils/pen to the exam, unless otherwise instructed</li>
-                                        </ul>
-                                    </div>
-                                    
-                                </Card.Body>
-                            </Card>
-                        </div>
+            <div>
+                <div className='row cus-top-margin' >
+                    <div className='col-sm-12 col-md-12 col-lg-4' >
+                        <Card className='cus-card-shadow cus-horizontal-spacing-2'>
+                            <Card.Body>
+                                <div className='row' style={{marginBottom:20}} >
+                                    <span className='col cus-card-text-3'>Class</span>
+                                    <span className='col cus-card-text-3'>Class 6</span>
+                                </div>
+                                <div className='row' style={{marginBottom:20}} >
+                                    <span className='col cus-card-text-3'>Time Duration (in mins)</span>
+                                    <span className='col cus-card-text-3'>60</span>
+                                </div>
+                                <div>
+                                    <p className='cus-card-text-3'>Guidelines:</p>
+                                    <ul>
+                                        <li><p className='cus-card-text-3'>Foam ear plugs to reduce noise are allowed and will also be available during the exam.</p></li>
+                                        <li><p className='cus-card-text-3'>Students may only bring an iPad and pencils/pen to the exam, unless otherwise instructed</p></li>
+                                    </ul>
+                                </div>
+                                
+                            </Card.Body>
+                        </Card>
                     </div>
 
-                    <div className='col col-md-8' >
-                        <div style={{marginRight:70, marginTop:50, marginLeft:30}}>
-                            <Card>
-                                <Card.Body>
-                                    <div className='row'>
-                                        <span className='col'>
-                                            Section A
-                                        </span>
-                                        <span className='col d-flex justify-content-end'>
-                                            <p style={{color:'blue'}}>Edit</p>
-                                        </span>
-                                    </div>
+                    <div className='col-sm-12 col-md-12 col-lg-8' >
+                        <Card className='cus-card-shadow cus-horizontal-spacing-2'>
+                            <Card.Body>
+                                <div className='row'>
+                                    <span className='col'>
+                                        Section A
+                                    </span>
+                                    <span className='col d-flex justify-content-end'>
+                                        <p style={{color:'blue'}}>Edit</p>
+                                    </span>
+                                </div>
 
-                                    <Card>
-                                        <Card.Body>
-                                            <Card.Text>Q1 Pick the odd one</Card.Text>
-                                            <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input style={{marginTop:6}} type='radio' checked disabled />
-                                                <p style={{marginLeft:20, color:'darkgreen'}} >Fish</p>
-                                            </div>
-                                            <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input style={{marginTop:6}}  type='radio' disabled />
-                                                <p style={{marginLeft:20,color:'red'}} >Tiger</p>
-                                            </div>
-                                            <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input style={{marginTop:6}}  type='radio' disabled />
-                                                <p style={{marginLeft:20, color:'red'}} >Lion</p>
-                                            </div>
-                                        </Card.Body>
-                                    </Card>
+                                <Card className='cus-top-margin-2'>
+                                    <Card.Body>
+                                        <Card.Text>Q1 Pick the odd one</Card.Text>
+                                        <div style={{marginBottom:10}}>
+                                            <input style={{marginTop:6}} className='cus-inline' type='radio' checked disabled />
+                                            <p style={{marginLeft:20, color:'darkgreen'}} className='cus-inline' >Fish</p>
+                                        </div>
+                                        <div style={{marginBottom:10}}>
+                                            <input style={{marginTop:6}} className='cus-inline' type='radio' disabled />
+                                            <p style={{marginLeft:20,color:'red'}} className='cus-inline' >Tiger</p>
+                                        </div>
+                                        <div style={{marginBottom:10}}>
+                                            <input style={{marginTop:6}} className='cus-inline' type='radio' disabled />
+                                            <p style={{marginLeft:20, color:'red'}} className='cus-inline' >Lion</p>
+                                        </div>
+                                    </Card.Body>
+                                </Card>
 
-                                    <Card>
-                                        <Card.Body>
-                                            <Card.Text>Q2 Pick the odd one</Card.Text>
-                                            <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input style={{marginTop:6}}  type='radio'  disabled />
-                                                <p style={{marginLeft:20, color:'red'}} >Car</p>
-                                            </div>
-                                            <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input style={{marginTop:6}}  type='radio' checked disabled />
-                                                <p style={{marginLeft:20, color:'darkgreen'}} >Ship</p>
-                                            </div>
-                                            <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                                <input style={{marginTop:6}}  type='radio' disabled />
-                                                <p style={{marginLeft:20, color:'red'}} >Bike</p>
-                                            </div>
-                                        </Card.Body>
-                                    </Card>
-                                    
-                                </Card.Body>
-                            </Card>
-                        </div>  
+                                <Card className='cus-top-margin-2'>
+                                    <Card.Body>
+                                        <Card.Text>Q2 Pick the odd one</Card.Text>
+                                        <div style={{marginBottom:10}}>
+                                            <input style={{marginTop:6}} className='cus-inline' type='radio'  disabled />
+                                            <p style={{marginLeft:20, color:'red'}} className='cus-inline'  >Car</p>
+                                        </div>
+                                        <div style={{marginBottom:10}}>
+                                            <input style={{marginTop:6}} className='cus-inline' type='radio' checked disabled />
+                                            <p style={{marginLeft:20, color:'darkgreen'}} className='cus-inline'>Ship</p>
+                                        </div>
+                                        <div style={{marginBottom:10}}>
+                                            <input style={{marginTop:6}} className='cus-inline' type='radio' disabled />
+                                            <p style={{marginLeft:20, color:'red'}} className='cus-inline'>Bike</p>
+                                        </div>
+                                    </Card.Body>
+                                </Card>
+                                
+                            </Card.Body>
+                        </Card>
                     </div>
                 </div>
             </div>

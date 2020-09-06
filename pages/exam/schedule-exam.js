@@ -19,7 +19,7 @@ const ScheduleExam = () =>{
         let qArray = []
         for(let i=1; i<=totalQns; i++){
             qArray.push(
-                <div style={{marginRight:70, marginTop:10, marginLeft:30}}>
+                <div className='cus-top-margin cus cus-horizontal-spacing'>
                             <Card>
                                 <Card.Body>
                                 <TextField
@@ -37,17 +37,17 @@ const ScheduleExam = () =>{
                                       }}
                                     />
                 <div>
-                    <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                        <input name='option' type='radio' value='1' style={{marginTop:10}} checked={option==='1'} onChange={()=>setOption('1')} />
-                        <TextField id="standard-full-width" placeholder="Option 1" fullWidth style={{marginLeft:20}}/>  
+                    <div>
+                        <input name='option' type='radio' value='1' className='cus-inline' checked={option==='1'} onChange={()=>setOption('1')} />
+                        <TextField id="standard-full-width" className='cus-inline' placeholder="Option 1" className='cus-full-width'  style={{marginLeft:20}}/>  
                     </div>
-                    <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                        <input name='option' type='radio' value='2' style={{marginTop:10}} checked={option==='2'} onChange={()=>setOption('2')} />
-                        <TextField id="standard-full-width" placeholder="Option 2" fullWidth style={{marginLeft:20}} />  
+                    <div>
+                        <input name='option' type='radio' value='2' className='cus-inline' checked={option==='2'} onChange={()=>setOption('2')} />
+                        <TextField id="standard-full-width" className='cus-inline' placeholder="Option 2" className='cus-full-width' style={{marginLeft:20}}  />  
                     </div>
-                    <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                        <input name='option' type='radio' value='3' style={{marginTop:10}} checked={option==='3'} onChange={()=>setOption('3')} />
-                        <TextField id="standard-full-width" placeholder="Option 3" fullWidth style={{marginLeft:20}}/>  
+                    <div>
+                        <input name='option' type='radio' value='3' checked={option==='3'} className='cus-inline' onChange={()=>setOption('3')} />
+                        <TextField id="standard-full-width"  placeholder="Option 3" className='cus-inline cus-full-width' style={{marginLeft:20}}/>  
                     </div>
                 </div>
                 </Card.Body>
@@ -65,21 +65,25 @@ const ScheduleExam = () =>{
         </Head>
 
         <body style={{overflowX:'hidden'}}>
-            <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                <span style={{display:'inline-block'}} >
-                    <h4 style={{marginLeft:50, marginTop:50}} >Prepare Exam Q/A</h4>
-                </span>
-                <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                    <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button>
-                    <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>Publish</Button>
-                </span>
+            <div className='cus-header-shadow cus-desktop-header'>
+                <div className='cus-header-content cus-header-start-2'>
+                    <h3>Prepare Exam Q/A</h3>
+                </div>
+                <div className='cus-header-content cus-header-end'>
+                    <Button variant='dark' className='cus-horizontal-padding cus-right-margin'>Preview</Button>
+                </div>
+            </div>
+    
+            <div className='cus-mobile-header text-center'>
+                <h5 className='cus-mobile-header-padding cus-inline-block'>Prepare Exam Q/A</h5>
+                <Button variant='dark' className='cus-horizontal-padding cus-inline-block cus-float-right cus-right-margin cus-mob-top-margin cus-card-text'>Preview</Button>
+                <hr className='my-4'/>
             </div>
 
             <div style={{marginBottom:50}}>
                 <div className='row' >
-                    <div className='col col-md-4' >
-
-                        <div style={{marginLeft:70, marginTop:50, marginRight:30}}>
+                    <div className='col-sm-12 col-md-12 col-lg-4' >
+                        <div className='cus-top-margin cus cus-horizontal-spacing'>
                             <p>Select the Class</p>
                             <Form>
                             <Form.Control 
@@ -93,7 +97,7 @@ const ScheduleExam = () =>{
                             </Form>
                         </div>
                         
-                        <div style={{marginLeft:70, marginTop:50, marginRight:30}}>
+                        <div className='cus-top-margin cus cus-horizontal-spacing'>
                             <p>Time Duration (in mins)</p>
                             <div className='d-flex justify-content-md-around flex-column flex-md-row' style={{marginBottom:50}}>
                                     <span>
@@ -123,7 +127,7 @@ const ScheduleExam = () =>{
                                 </div>
                         </div>
 
-                        <div style={{marginLeft:70, marginTop:50, marginRight:30}}>
+                        <div className='cus-top-margin cus cus-horizontal-spacing'>
                             <p>Description (optional)</p>
                             <TextField
                                 id="outlined-multiline-static"
@@ -135,7 +139,7 @@ const ScheduleExam = () =>{
                                 />
                         </div>
 
-                        <div style={{marginLeft:70, marginTop:50, marginRight:30}}>
+                        <div className='cus-top-margin cus cus-horizontal-spacing'>
                             <p>Guidelines</p>
                             <TextField
                                 id="outlined-multiline-static"
@@ -147,7 +151,7 @@ const ScheduleExam = () =>{
                                 />
                         </div>
 
-                        <div style={{marginLeft:70, marginTop:50, marginRight:30}}>
+                        <div className='cus-top-margin cus cus-horizontal-spacing'>
                             <p>Exam Due On</p>
                             <Form>
                                 <Form.Control 
@@ -164,8 +168,8 @@ const ScheduleExam = () =>{
                     </div>
 
 
-                    <div className='col col-md-8'>
-                        <div style={{marginRight:70, marginTop:50, marginLeft:30}}>
+                    <div className='col-sm-12 col-md-12 col-lg-8'>
+                        <div className='cus-top-margin cus cus-horizontal-spacing'>
                             <Card className={utilStyles.card} >
                                 <Card.Body>
                                     <p>Select the type of question format</p>
@@ -178,7 +182,7 @@ const ScheduleExam = () =>{
                         {
                             examType == 'MCQ'
                             ?
-                            <div style={{marginRight:70, marginTop:50, marginLeft:30}}>
+                            <div className='cus-top-margin cus cus-horizontal-spacing'>
                             <b>MCQ Questions</b>
                             <p style={{fontSize:12, color:'gray'}} >(Select the correct answer after each question)</p>
                             <br/>
@@ -215,7 +219,7 @@ const ScheduleExam = () =>{
                         </div>
                         : examType == 'Q/A'
                         ?
-                        <div style={{marginRight:70, marginTop:50, marginLeft:30}}>
+                        <div className='cus-top-margin cus cus-horizontal-spacing'>
                             <b>Q/A</b>
                             <p style={{fontSize:12, color:'gray'}} >Tip: For fill ups use '_'</p>
                             <br/>
@@ -246,11 +250,7 @@ const ScheduleExam = () =>{
                         :
                         null
                         }
-
                         {questions ? <div style={{overflowY:'scroll', maxHeight:400}} >{questions}</div> : null} 
-                                    
-                                
-
                     </div>
                 </div>
             </div>

@@ -11,29 +11,27 @@ const SubmitExam = () =>{
             <Head>
                 <title>Submitted Exam</title>
             </Head>
-            <body>
-                <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                    <span style={{display:'inline-block'}} >
-                        <h4 style={{marginLeft:50, marginTop:50}} >Science Exam</h4>
-                    </span>
-                    <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                        {/* <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> */}
-                        {/* <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>Submit</Button> */}
-                    </span>
-                </div>
-
-                <div>
-                    <div style={{position:'absolute', display:'block',width:'100%', top:'30%'}} className='d-flex justify-content-center' >
-                        <Card className={utilStyles.card} style={{width:'40%'}} >
-                            <Card.Body>
-                                <div style={{textAlign:'center', padding:30}} >
-                                    <img style={{marginBottom:20}} src={success} className='img-fluid'/>
-                                </div>
-                            </Card.Body>
-                        </Card>
+            <body >
+                <div className='cus-header-shadow cus-desktop-header'>
+                    <div className='cus-header-content cus-header-start-2'>
+                        <h3>Science Exam</h3>
                     </div>
                 </div>
-                
+        
+                <div className='cus-mobile-header text-center'>
+                    <h5 className='cus-mobile-header-padding'>Science Exam</h5>
+                    <hr className='my-4'/>
+                </div>
+
+                <div className='d-flex justify-content-center align-items-center'>
+                    <Card className='cus-top-margin cus-desktop-width cus-horizontal-spacing cus-card-shadow'>
+                        <Card.Body>
+                            <div style={{textAlign:'center', padding:30}} >
+                                <img style={{marginBottom:20}} src={success} className='img-fluid'/>
+                            </div>
+                        </Card.Body>
+                    </Card>
+                </div>
             </body>
         </>
     )

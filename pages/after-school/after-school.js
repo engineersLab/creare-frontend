@@ -19,21 +19,22 @@ const AfterSchool = () =>{
                 <title>After School</title>
             </Head>
             <Sidebar/>
-            <body  >
-                <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                    <span style={{display:'inline-block'}} >
-                        <h3 style={{marginLeft:135, marginTop:50}} >After School</h3>
-                    </span>
-                    <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                        {/* <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> */}
-                        {/* <Button onClick={()=>setQShow(true)} variant='dark' style={{paddingRight:30,paddingLeft:30}}>Ask Question</Button> */}
-                    </span>
+            <body>
+                <div className='cus-header-shadow cus-desktop-header'>
+                    <div className='cus-header-content cus-header-start'>
+                        <h3>After School</h3>
+                    </div>
+                </div>
+        
+                <div className='cus-mobile-header text-center'>
+                    <h5 className='cus-mobile-header-padding'>After School</h5>
+                    <hr className='my-4'/>
                 </div>
 
-                <div style={{marginLeft:135, marginTop:30, marginRight:60}} >
-                    <div className='row flex-column flex-md-row'>
-                        <div className='col'>
-                            <Card className={utilStyles.card} style={{height:210, cursor:'pointer'}}  >
+                <div className='cus-dashboard-content cus-top-margin'>
+                    <div className='row'>
+                        <div className='col-sm-12 col-md-6 col-lg-3'>
+                            <Card className='cus-card-shadow' style={{height:210, cursor:'pointer'}}  >
                                 <Card.Body>
                                     <div style={{textAlign:'center'}} >
                                         <img src={Brainclub} className='img-fluid'/>
@@ -42,8 +43,8 @@ const AfterSchool = () =>{
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className='col' >
-                            <Card className={utilStyles.card} style={{height:210, cursor:'pointer'}}>
+                        <div className='col-sm-12 col-md-6 col-lg-3' >
+                            <Card className='cus-card-shadow' style={{height:210, cursor:'pointer'}}>
                                 <Card.Body>
                                     <div style={{textAlign:'center'}} >
                                         <img src={ArtClub} className='img-fluid'/>
@@ -52,8 +53,8 @@ const AfterSchool = () =>{
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className='col' >
-                            <Card className={utilStyles.card} style={{height:210, cursor:'pointer'}}>
+                        <div className='col-sm-12 col-md-6 col-lg-3' >
+                            <Card className='cus-card-shadow' style={{height:210, cursor:'pointer'}}>
                                 <Card.Body>
                                     <div style={{textAlign:'center'}} >
                                         <img src={Bulletin} className='img-fluid'/>
@@ -62,8 +63,8 @@ const AfterSchool = () =>{
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className='col' >
-                            <Card className={utilStyles.card} style={{height:210, cursor:'pointer'}} >
+                        <div className='col-sm-12 col-md-6 col-lg-3' >
+                            <Card className='cus-card-shadow' style={{height:210, cursor:'pointer'}} >
                                 <Card.Body>
                                     <div style={{textAlign:'center'}} >
                                         <img src={LanguageClub} className='img-fluid'/>
@@ -74,9 +75,9 @@ const AfterSchool = () =>{
                         </div>
                     </div>
 
-                    <div className='row flex-column flex-md-row' style={{marginTop:30}}>
-                        <div className='col'>
-                            <Card className={utilStyles.card} style={{height:210, cursor:'pointer'}}  >
+                    <div className='row' style={{marginTop:30}}>
+                        <div className='col-sm-12 col-md-6 col-lg-3'>
+                            <Card className='cus-card-shadow' style={{height:210, cursor:'pointer'}}  >
                                 <Card.Body>
                                     <div style={{textAlign:'center'}} >
                                         <img src={ArtClub} className='img-fluid'/>
@@ -85,8 +86,8 @@ const AfterSchool = () =>{
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className='col' >
-                            <Card className={utilStyles.card} style={{height:210, cursor:'pointer'}}>
+                        <div className='col-sm-12 col-md-6 col-lg-3' >
+                            <Card className='cus-card-shadow' style={{height:210, cursor:'pointer'}}>
                                 <Card.Body>
                                     <div style={{textAlign:'center'}} >
                                         <img src={GamesClub} className='img-fluid'/>
@@ -95,8 +96,8 @@ const AfterSchool = () =>{
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className='col' >
-                            <Card className={utilStyles.card} style={{height:210, cursor:'pointer'}}>
+                        <div className='col-sm-12 col-md-6 col-lg-3' >
+                            <Card className='cus-card-shadow' style={{height:210, cursor:'pointer'}}>
                                 <Card.Body>
                                     <div style={{textAlign:'center'}} >
                                         <img src={AptitudeClub} className='img-fluid'/>
@@ -105,8 +106,8 @@ const AfterSchool = () =>{
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div className='col' >
-                            <Card className={utilStyles.card} style={{height:210, cursor:'pointer'}} >
+                        <div className='col-sm-12 col-md-6 col-lg-3' >
+                            <Card className='cus-card-shadow' style={{height:210, cursor:'pointer'}} >
                                 <Card.Body>
                                     <div style={{textAlign:'center'}} >
                                         <img src={Bulletin} className='img-fluid'/>

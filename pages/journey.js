@@ -40,7 +40,6 @@ const Journey = () =>{
                 <section className='cus-journey-content' >
                     <div className='row' >
                         <div className='col-sm-12 col-md-5'>
-                            {/* <h1>Hi</h1> */}
                             <img src={pravin} className='img-fluid'/>
                         </div>
 

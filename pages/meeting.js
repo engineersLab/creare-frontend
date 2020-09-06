@@ -31,7 +31,6 @@ const Meeting = () =>{
                         </div>
                     </span>
                     <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:40}} >
-                        {/* <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> */}
                         <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>End Call</Button>
                     </span>
                 </div>
@@ -94,48 +93,48 @@ const Meeting = () =>{
                         <div style={{marginTop:30}}>
                             <div style={{display:'inline-block'}}>
                                 <div style={{display:'inline-block', marginRight:15}}>
-                                    <Button variant='outline-dark' style={{padding:10}}>
-                                        <IconContext.Provider  value={{ size:'1.4em' }}>
+                                    <Button variant='outline-dark' className='cus-meeting-pad'>
+                                        <IconContext.Provider  value={{ size:'1em' }}>
                                             <BsFillMicFill style={{cursor:'pointer'}}/> 
                                         </IconContext.Provider>
                                     </Button>
                                 </div>
                                 <div style={{display:'inline-block', marginRight:15}}>
-                                    <Button variant='outline-dark' style={{padding:10}}>
-                                        <IconContext.Provider  value={{ size:'1.4em' }}>
+                                    <Button variant='outline-dark' className='cus-meeting-pad'>
+                                        <IconContext.Provider  value={{ size:'1em' }}>
                                             <BsCameraVideoFill style={{cursor:'pointer'}}/> 
                                         </IconContext.Provider>
                                     </Button>
                                 </div>
                                 <div style={{display:'inline-block'}}>
-                                    <p style={{fontWeight:600,color:'#0d3d55'}}>Screen Share</p>
+                                    <p className='cus-card-text' style={{fontWeight:600,color:'#0d3d55'}}>Screen Share</p>
                                 </div>
                             </div>
 
                             <div style={{display:'inline-block', float:'right'}}>
                                 <div style={{display:'inline-block', marginRight:15}}>
-                                    <Button variant='outline-dark' style={{padding:10}}>
+                                    <Button variant='outline-dark' className='cus-meeting-pad cus-card-text'>
                                         Show Participants View
                                     </Button>
                                 </div>
                                 <div style={{display:'inline-block', marginRight:15}}>
-                                    <Button variant='outline-dark' style={{padding:10}}>
-                                        <IconContext.Provider  value={{ size:'1.4em' }}>
+                                    <Button variant='outline-dark' className='cus-meeting-pad'>
+                                        <IconContext.Provider  value={{ size:'1em' }}>
                                             <GrNotes style={{cursor:'pointer'}}/> 
                                         </IconContext.Provider>
                                     </Button>
                                 </div>
                                 <div style={{display:'inline-block', marginRight:15}}>
-                                    <Button variant='outline-dark' style={{padding:10}}>
-                                        <IconContext.Provider  value={{ size:'1.4em' }}>
+                                    <Button variant='outline-dark' className='cus-meeting-pad'>
+                                        <IconContext.Provider  value={{ size:'1em' }}>
                                             <FaHandPaper style={{cursor:'pointer'}}/> 
                                         </IconContext.Provider>
                                     </Button>
                                 </div>
                                 <div style={{display:'inline-block', marginRight:15}}>
-                                    <Button variant='outline-dark' style={{padding:10}}>
-                                        <IconContext.Provider  value={{ size:'1.4em' }}>
-                                            <AiOutlineWechat style={{cursor:'pointer'}}/> 
+                                    <Button variant='outline-dark' className='cus-meeting-pad'>
+                                        <IconContext.Provider  value={{ size:'1em' }}>
+                                            <AiOutlineWechat style={{cursor:'pointer'}}/>
                                         </IconContext.Provider>
                                     </Button>
                                 </div>

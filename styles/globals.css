@@ -22,6 +22,9 @@ a {
 .cus-img{
   width: 75%;
 }
+.cus-full-width{
+  width: 80%;
+}
 .cus-img-1{
   width: 50%;
 }
@@ -93,6 +96,18 @@ a {
   margin-left: 10px;
   margin-right: 10px;
 }
+.cus-inline{
+  display: inline;
+}
+.cus-inline-block{
+  display: inline-block;
+}
+.cus-float-right{
+  float: right;
+}
+.cus-fill-height{
+  height: 100%;
+}
 
 @media (min-width:768px){
   .cus-header-logo{
@@ -113,6 +128,10 @@ a {
   }
   .cus-dashboard-content{
     margin-left: 135px;
+    margin-right: 40px;
+  }
+  .cus-dashboard-content-2{
+    margin-left: 40px;
     margin-right: 40px;
   }
   .cus-card-header-text{
@@ -142,6 +161,10 @@ a {
     cursor: pointer;
   }
   .cus-card-text-2{
+    font-size: 15px;
+    display: inline;
+  }
+  .cus-card-text-3{
     font-size: 15px;
     display: inline;
   }
@@ -178,6 +201,15 @@ a {
     margin-top: 30px;
     margin-bottom: 30px;
   }
+  .cus-desktop-width{
+    width: 50%;
+  }
+  .cus-meeting-but{
+    size: 1.3em;
+  }
+  .cus-meeting-pad{
+    padding: 8px;
+  }
 }
 
 @media (max-width:768px){
@@ -201,6 +233,10 @@ a {
     margin-left: 40px;
     margin-right: 40px;
   }
+  .cus-dashboard-content-2{
+    margin-left: 40px;
+    margin-right: 40px;
+  }
   .cus-mobile-header{
     display: none;
   }
@@ -219,6 +255,10 @@ a {
   }
   .cus-card-text-2{
     font-size: 12px;
+    display: inline;
+  }
+  .cus-card-text-3{
+    font-size: 15px;
     display: inline;
   }
   .cus-bullet{
@@ -257,6 +297,15 @@ a {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  .cus-desktop-width{
+    width: 60%;
+  }
+  .cus-meeting-but{
+    size: 1.2em;
+  }
+  .cus-meeting-pad{
+    padding: 5px;
+  }
 }
 
 @media (max-width:576px){
@@ -283,6 +332,10 @@ a {
     margin-left: 10px;
     margin-right: 10px;
   }
+  .cus-dashboard-content-2{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   .cus-card-header-text{
     font-size: medium;
   }
@@ -294,6 +347,10 @@ a {
   }
   .cus-card-text-2{
     font-size: 10px;
+    display: inline;
+  }
+  .cus-card-text-3{
+    font-size: 13px;
     display: inline;
   }
   .cus-bullet{
@@ -332,6 +389,9 @@ a {
   .cus-mob-top-margin{
     margin-top: 20px;
   }
+  .cus-mob-top-margin-2{
+    margin-top: 10px;
+  }
   .cus-form-header-text{
     font-size: larger;
   }
@@ -344,6 +404,19 @@ a {
   .cus-vertical-margin{
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+  .cus-mob-vertical-margin{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .cus-desktop-width{
+    width: 100%;
+  }
+  .cus-meeting-but{
+    size: 1em;
+  }
+  .cus-meeting-pad{
+    padding: 5px;
   }
 }
 

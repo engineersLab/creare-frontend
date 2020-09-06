@@ -12,62 +12,68 @@ const ExamOn = () =>{
         </Head>
 
         <body style={{overflowX:'hidden'}}>
-            <div style={{display:'block', width:'100%', height:120}} className={utilStyles.header_shadow}>
-                <span style={{display:'inline-block'}} >
-                    <h4 style={{marginLeft:50, marginTop:50}} >Science Exam</h4>
-                </span>
-                <span style={{display:'inline-block', float:'right',marginRight:50, marginTop:50}} >
-                    {/* <Button variant='outline-dark' style={{paddingRight:30,paddingLeft:30, marginRight:30}} >Preview</Button> */}
-                    <Button variant='dark' style={{paddingRight:30,paddingLeft:30}}>Submit</Button>
-                </span>
+            <div className='cus-header-shadow cus-desktop-header'>
+                <div className='cus-header-content cus-header-start-2'>
+                    <h3>Science Exam</h3>
+                </div>
+                <div className='cus-header-content cus-header-end'>
+                    {/* <Button variant='outline-dark' style={{marginRight:20}} >Go Live</Button> */}
+                    <Button variant='dark' className='cus-horizontal-padding cus-right-margin'>Submit</Button>
+                </div>
+            </div>
+    
+            <div className='cus-mobile-header text-center'>
+                <h5 className='cus-mobile-header-padding cus-inline-block'>Science Exam</h5>
+                <Button variant='dark' className='cus-horizontal-padding cus-inline-block cus-float-right cus-right-margin cus-mob-top-margin-2'>Submit</Button>
+                <hr className='my-4'/>
             </div>
 
-            <div >
-                <div style={{marginLeft:70, marginTop:50, marginRight:30}}>
+            <div>
+                <div className='cus-horizontal-spacing cus-top-margin'>
                     <Card>
-                            <Card.Body>
-                                <div style={{padding:20}}>
-                                    <h4 style={{marginBottom:10}}>Section A</h4>
-                                    
-                                    <h5>10 Questions</h5>
-                                </div>
-
-                                <Card>
-                                    <Card.Body>
-                                        <Card.Text>Q1 Pick the odd one</Card.Text>
-                                        <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                            <input style={{marginTop:6}}  type='radio' checked disabled />
-                                            <p style={{marginLeft:20, color:'darkgreen'}} >Fish</p>
-                                        </div>
-                                        <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                            <input style={{marginTop:6}}  type='radio' disabled />
-                                            <p style={{marginLeft:20, color:'red'}} >Tiger</p>
-                                        </div>
-                                        <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                            <input style={{marginTop:6}}  type='radio' disabled />
-                                            <p style={{marginLeft:20, color:'red'}} >Lion</p>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-
-                                <Card>
-                                    <Card.Body>
-                                        <Card.Text>Q2 Pick the odd one</Card.Text>
-                                        <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                            <input style={{marginTop:6}}  type='radio'  disabled />
-                                            <p style={{marginLeft:20, color:'red'}} >Car</p>
-                                        </div>
-                                        <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                            <input style={{marginTop:6}}  type='radio' checked disabled />
-                                            <p style={{marginLeft:20, color:'darkgreen'}} >Ship</p>
-                                        </div>
-                                        <div style={{marginBottom:10}} className='d-flex flex-column flex-md-row'>
-                                            <input style={{marginTop:6}}  type='radio' disabled />
-                                            <p style={{marginLeft:20, color:'red'}} >Bike</p>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
+                        <Card.Body>
+                            <div style={{padding:20}}>
+                                <h4 style={{marginBottom:10}}>Section A</h4>
                                 
+                                <h5>10 Questions</h5>
+                            </div>
+
+                            <Card className='cus-card-shadow'>
+                                <Card.Body>
+                                    <Card.Text>Q1 Pick the odd one</Card.Text>
+                                    <div style={{marginBottom:10}}>
+                                        <input style={{marginTop:6}} className='cus-inline'  type='radio' checked/>
+                                        <p style={{marginLeft:20, color:'darkgreen'}} className='cus-inline'>Fish</p>
+                                    </div>
+                                    <div style={{marginBottom:10}}>
+                                        <input style={{marginTop:6}} className='cus-inline'  type='radio' />
+                                        <p style={{marginLeft:20, color:'red'}} className='cus-inline' >Tiger</p>
+                                    </div>
+                                    <div style={{marginBottom:10}} >
+                                        <input style={{marginTop:6}} className='cus-inline'  type='radio'/>
+                                        <p style={{marginLeft:20, color:'red'}} className='cus-inline'>Lion</p>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+
+                            <Card className='cus-card-shadow'>
+                                <Card.Body>
+                                    <Card.Text>Q2 Pick the odd one</Card.Text>
+                                    <div style={{marginBottom:10}}>
+                                        <input style={{marginTop:6}} className='cus-inline' type='radio' />
+                                        <p style={{marginLeft:20, color:'red'}} className='cus-inline'>Car</p>
+                                    </div>
+                                    <div style={{marginBottom:10}} >
+                                        <input style={{marginTop:6}} className='cus-inline' type='radio' checked />
+                                        <p style={{marginLeft:20, color:'darkgreen'}} className='cus-inline' >Ship</p>
+                                    </div>
+                                    <div style={{marginBottom:10}}>
+                                        <input style={{marginTop:6}} className='cus-inline' type='radio' />
+                                        <p style={{marginLeft:20, color:'red'}} className='cus-inline' >Bike</p>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                            
                             </Card.Body>
                         </Card>
                     </div>
